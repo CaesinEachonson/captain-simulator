@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/combat/AttackReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/combat/AttackResolve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/combat/BattleSystem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/combat/CombatReport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/combat/CombatResolver.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/common/Mutation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/common/MutationRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/common/StatModifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/common/consts/AttributeConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/common/enums/WorldType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/base/BaseItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/base/BaseUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/factory/ArmourFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/factory/SquadFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/factory/WeaponFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/items/ArmourItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/items/GearItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/items/WeaponItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/Chapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/ChapterCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/ChapterRelations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/Enums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/ChapterStrength.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/ChapterType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/PsychicDiscipline.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/PurityLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/RecruitmentRitual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/enums/StabilityLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/traits/ChapterStats.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/traits/ChapterTrait.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/chapter/traits/ChapterTraitRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/company/Armory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/company/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/company/CompanyType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/company/ProductionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/company/ResourcePool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/enemy/EnemyUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/enemy/Horde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/enemy/factions/EnemyChaos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/marine/MarineUnit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/marine/enums/BattleRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/squad/Squad.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/entity/units/squad/SquadType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/mission/Mission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/mission/MissionType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/core/utils/Dice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/CompanyGeneratorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/EquipmentDistributor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/HordeGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/test/SquadBattleTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/armour.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/marine_names.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/squad_honor_titles.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/weapons_melee.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/weapons_ranged.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3EWIsMSySdRLqUWLPn0htp50Jn0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CompanyGeneratorTest.executor": "Run",
+    "Application.HordeGenerator.executor": "Run",
+    "Application.SquadBattleTest.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.SquadBattleTest">
+    <configuration name="CompanyGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.test.CompanyGeneratorTest" />
+      <module name="captain_simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HordeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.test.HordeGenerator" />
+      <module name="captain_simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SquadBattleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.test.SquadBattleTest" />
+      <module name="captain_simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SquadBattleTest" />
+        <item itemvalue="Application.HordeGenerator" />
+        <item itemvalue="Application.CompanyGeneratorTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="" />
+      <created>1780288106990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780288106990</updated>
+    </task>
+    <servers />
+  </component>
+</project>

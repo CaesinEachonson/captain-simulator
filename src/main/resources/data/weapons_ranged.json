@@ -1,0 +1,182 @@
+{
+  "bolt_gun": {
+    "name": "Bolt Gun",
+    "damage": 30,
+    "armourPenetration": 2,
+    "ammo": 24,
+    "range": 6,
+    "attacks": 2,
+    "traits": ["standard", "rapid_fire", "bolt_weapon"]
+  },
+  "bolt_pistol": {
+    "name": "Bolt Pistol",
+    "damage": 30,
+    "armourPenetration": 2,
+    "ammo": 12,
+    "range": 3,
+    "attacks": 1,
+    "traits": ["pistol", "rapid_fire", "bolt_weapon"]
+  },
+  "heavy_bolt_gun": {
+    "name": "Heavy Bolt Gun",
+    "damage": 40,
+    "armourPenetration": 4,
+    "ammo": 60,
+    "range": 9,
+    "attacks": 5,
+    "traits": ["heavy", "bolt_weapon"]
+  },
+  "plasma_gun": {
+    "name": "Plasma Gun",
+    "damage": 60,
+    "armourPenetration": 8,
+    "ammo": 24,
+    "range": 7,
+    "attacks": 1,
+    "traits": ["standard", "overheat", "rapid_fire", "plasma_weapon"]
+  },
+  "plasma_pistol": {
+    "name": "Plasma Pistol",
+    "damage": 54,
+    "armourPenetration": 6,
+    "ammo": 12,
+    "range": 4,
+    "attacks": 1,
+    "traits": ["pistol", "overheat", "plasma_weapon"]
+  },
+  "plasma_cannon": {
+    "name": "Plasma Cannon",
+    "damage": 80,
+    "armourPenetration": 8,
+    "ammo": 12,
+    "range": 10,
+    "attacks": 3,
+    "traits": ["heavy", "overheat", "plasma_weapon"]
+  },
+  "melta_gun": {
+    "name": "Melta Gun",
+    "damage": 80,
+    "armourPenetration": 12,
+    "ammo": 12,
+    "range": 4,
+    "attacks": 1,
+    "traits": ["standard", "melta_weapon"]
+  },
+  "inferno_pistol": {
+    "name": "Inferno Pistol",
+    "damage": 60,
+    "armourPenetration": 10,
+    "ammo": 6,
+    "range": 2,
+    "attacks": 1,
+    "traits": ["pistol", "melta_weapon"]
+  },
+  "multi_melta": {
+    "name": "Multi Melta",
+    "damage": 80,
+    "armourPenetration": 12,
+    "ammo": 12,
+    "range": 6,
+    "attacks": 1,
+    "traits": ["heavy", "melta_weapon"]
+  },
+  "grav_gun": {
+    "name": "Grav Gun",
+    "damage": 24,
+    "armourPenetration": 0,
+    "ammo": 12,
+    "range": 6,
+    "attacks": 2,
+    "traits": ["standard", "grav_weapon"]
+  },
+  "grav_pistol": {
+    "name": "Grav Pistol",
+    "damage": 24,
+    "armourPenetration": 0,
+    "ammo": 12,
+    "range": 3,
+    "attacks": 2,
+    "traits": ["pistol", "grav_weapon"]
+  },
+  "grav_cannon": {
+    "name": "Grav Cannon",
+    "damage": 24,
+    "armourPenetration": 0,
+    "ammo": 12,
+    "range": 9,
+    "attacks": 3,
+    "traits": ["heavy", "grav_weapon"]
+  },
+  "flamer": {
+    "name": "Flamer",
+    "damage": 18,
+    "armourPenetration": 0,
+    "ammo": 6,
+    "range": 3,
+    "attacks": 6,
+    "traits": ["standard", "flame_weapon"]
+  },
+  "hand_flamer": {
+    "name": "Hand Flamer",
+    "damage": 14,
+    "armourPenetration": 0,
+    "ammo": 3,
+    "range": 2,
+    "attacks": 3,
+    "traits": ["pistol", "flame_weapon"]
+  },
+  "heavy_flamer": {
+    "name": "Heavy Flamer",
+    "damage": 20,
+    "armourPenetration": 4,
+    "ammo": 8,
+    "range": 3,
+    "attacks": 10,
+    "traits": ["heavy", "flame_weapon"]
+  },
+  "autogun": {
+    "name": "Autogun",
+    "damage": 16,
+    "armourPenetration": 0,
+    "ammo": 24,
+    "range": 5,
+    "attacks": 1,
+    "traits": ["standard"]
+  },
+  "autopistol": {
+    "name": "Autopistol",
+    "damage": 12,
+    "armourPenetration": 0,
+    "ammo": 12,
+    "range": 3,
+    "attacks": 1,
+    "traits": ["pistol"]
+  },
+  "lasgun": {
+    "name": "Lasgun",
+    "damage": 20,
+    "armourPenetration": 0,
+    "ammo": 30,
+    "range": 6,
+    "attacks": 1,
+    "traits": ["standard", "rapid_fire"]
+  },
+  "laspistol": {
+    "name": "Laspistol",
+    "damage": 14,
+    "armourPenetration": 0,
+    "ammo": 15,
+    "range": 3,
+    "attacks": 1,
+    "traits": ["pistol"]
+  },
+  "heavy_war_bolter": {
+    "name": "Heavy War Bolter",
+    "damage": 40,
+    "armourPenetration": 3,
+    "ammo": 60,
+    "range": 9,
+    "attacks": 3,
+    "traits": ["heavy"]
+  }
+}

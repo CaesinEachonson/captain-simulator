@@ -1,0 +1,358 @@
+package org.test;
+
+import org.core.combat.AttackReport;
+import org.core.combat.AttackResolve;
+import org.core.combat.BattleSystem;
+import org.core.combat.CombatReport;
+import org.core.entity.items.ArmourItem;
+import org.core.entity.items.WeaponItem;
+import org.core.entity.units.enemy.EnemyUnit;
+import org.core.entity.units.enemy.Horde;
+import org.core.entity.units.enemy.factions.EnemyChaos;
+import org.core.entity.units.marine.MarineUnit;
+import org.core.entity.units.marine.enums.BattleRole;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import org.core.entity.units.squad.Squad;
+import org.core.entity.units.squad.SquadType;
+
+import java.io.*;
+import java.lang.reflect.Type;
+import java.nio.charset.StandardCharsets;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+
+public class SquadBattleTest {
+
+    // ==================== Configuration ====================
+
+    private static final SquadType SQUAD_TYPE = SquadType.ASSAULT_SQUAD;
+    private static final boolean USE_CUSTOM_ENEMY = true;
+    private static final int ENEMY_STRENGTH = 1200;
+    private static final int ENEMY_THREAT = 2;
+    private static final int COMBAT_DISTANCE = 3;
+
+    // ==================== Main ====================
+
+    public static void main(String[] args) throws Exception {
+        // 1. Load data
+        Map<String, WeaponItem> meleeWeapons = loadWeapons("data/weapons_melee.json");
+        Map<String, WeaponItem> rangedWeapons = loadWeapons("data/weapons_ranged.json");
+        Map<String, ArmourItem> armours = loadArmours("data/armour.json");
+        EquipmentDistributor.init(meleeWeapons, rangedWeapons, armours);
+
+        // 2. Create squad
+        Squad squad = createSquad(SQUAD_TYPE);
+        System.out.println("Squad created: " + squad.getDisplayName() + " (" + squad.getSize() + " marines)");
+
+        // 3. Create enemy horde
+        Horde horde = USE_CUSTOM_ENEMY
+                ? EnemyChaos.generateHorde("enemy_force", ENEMY_STRENGTH, ENEMY_THREAT)
+                : EnemyChaos.generateFixedHorde("enemy_force", "chaos_patrol");
+        System.out.println("Horde created: " + horde.getSize() + " units");
+
+        // 4. Run battle
+        runBattle(squad, horde);
+    }
+
+    // ==================== Squad Creation ====================
+
+    private static Squad createSquad(SquadType type) throws Exception {
+        List<String> names = loadNames();
+        Collections.shuffle(names, new Random());
+
+        Squad squad = new Squad("test_" + type.name().toLowerCase(), type, null, "Test", 10);
+        Iterator<String> nameIt = names.iterator();
+
+        switch (type) {
+            case TACTICAL_SQUAD -> {
+                MarineUnit sgt = createMarine(nameIt.next(), BattleRole.SERGEANT);
+                EquipmentDistributor.equipSergeant(sgt);
+                EquipmentDistributor.assignArmor(sgt);
+                squad.addMarine(sgt);
+
+                List<Integer> indices = new ArrayList<>();
+                for (int i = 0; i < 9; i++) indices.add(i);
+                Collections.shuffle(indices, new Random());
+                int standardIdx = indices.get(0);
+                int heavyIdx = indices.get(1);
+
+                for (int i = 0; i < 9; i++) {
+                    final int idx = i;
+                    final boolean replaceStandard = (idx == standardIdx);
+                    final boolean replaceHeavy = (idx == heavyIdx);
+                    MarineUnit m = createMarine(nameIt.next(), BattleRole.TACTICAL);
+                    EquipmentDistributor.equipTacticalMarine(m, replaceStandard, replaceHeavy);
+                    EquipmentDistributor.assignArmor(m);
+                    squad.addMarine(m);
+                }
+            }
+            case ASSAULT_SQUAD -> {
+                MarineUnit sgt = createMarine(nameIt.next(), BattleRole.SERGEANT);
+                EquipmentDistributor.equipSergeant(sgt);
+                EquipmentDistributor.assignArmor(sgt);
+                squad.addMarine(sgt);
+
+                List<Integer> indices = new ArrayList<>();
+                for (int i = 0; i < 9; i++) indices.add(i);
+                Collections.shuffle(indices, new Random());
+                int melee1 = indices.get(0), melee2 = indices.get(1);
+                int pistol1 = indices.get(2), pistol2 = indices.get(3);
+
+                for (int i = 0; i < 9; i++) {
+                    final int idx = i;
+                    final boolean replaceMelee = (idx == melee1 || idx == melee2);
+                    final boolean replacePistol = (idx == pistol1 || idx == pistol2);
+                    MarineUnit m = createMarine(nameIt.next(), BattleRole.ASSAULT);
+                    EquipmentDistributor.equipAssaultMarine(m, replaceMelee, replacePistol);
+                    EquipmentDistributor.assignArmor(m);
+                    squad.addMarine(m);
+                }
+            }
+            case DEVASTATOR_SQUAD -> {
+                MarineUnit sgt = createMarine(nameIt.next(), BattleRole.SERGEANT);
+                EquipmentDistributor.equipSergeant(sgt);
+                EquipmentDistributor.assignArmor(sgt);
+                squad.addMarine(sgt);
+
+                List<Integer> indices = new ArrayList<>();
+                for (int i = 0; i < 9; i++) indices.add(i);
+                Collections.shuffle(indices, new Random());
+                Set<Integer> heavyReplacements = new HashSet<>(indices.subList(0, 4));
+
+                for (int i = 0; i < 9; i++) {
+                    final int idx = i;
+                    final boolean replaceHeavy = heavyReplacements.contains(idx);
+                    MarineUnit m = createMarine(nameIt.next(), BattleRole.DEVASTATOR);
+                    EquipmentDistributor.equipDevastatorMarine(m, replaceHeavy);
+                    EquipmentDistributor.assignArmor(m);
+                    squad.addMarine(m);
+                }
+            }
+            case COMMAND_SQUAD -> {
+                MarineUnit cap = createMarine(nameIt.next(), BattleRole.CAPTAIN);
+                EquipmentDistributor.equipCaptain(cap);
+                EquipmentDistributor.assignArmor(cap);
+                squad.addMarine(cap);
+
+                for (int i = 0; i < 9; i++) {
+                    MarineUnit m = createMarine(nameIt.next(), BattleRole.VETERAN);
+                    EquipmentDistributor.equipVeteran(m);
+                    EquipmentDistributor.assignArmor(m);
+                    squad.addMarine(m);
+                }
+            }
+            default -> throw new IllegalArgumentException("Unsupported squad type: " + type);
+        }
+
+        return squad;
+    }
+
+    private static MarineUnit createMarine(String name, BattleRole role) {
+        MarineUnit marine = new MarineUnit();
+        marine.setName(name);
+        marine.setWorldOrigin(org.core.common.enums.WorldType.CIVILIZED);
+        marine.setRole(role);
+        marine.generateAttributes();
+        marine.applyLevels(80 + ThreadLocalRandom.current().nextInt(40));
+        return marine;
+    }
+
+    private static List<String> loadNames() throws Exception {
+        try (InputStream is = SquadBattleTest.class.getClassLoader()
+                .getResourceAsStream("data/marine_names.json")) {
+            if (is == null) {
+                throw new FileNotFoundException("data/marine_names.json not found in resources");
+            }
+            String json = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            Gson gson = new Gson();
+            Type listType = new TypeToken<List<String>>() {}.getType();
+            return gson.fromJson(json, listType);
+        }
+    }
+
+    // ==================== Battle ====================
+
+    private static void runBattle(Squad squad, Horde horde) throws Exception {
+        int distance = COMBAT_DISTANCE;
+        int turn = 0;
+
+        StringBuilder log = new StringBuilder();
+        log.append("======= Squad Battle Report =======\n");
+        log.append(String.format("Squad: %s (%d marines)\n", squad.getDisplayName(), squad.getSize()));
+        log.append(String.format("Enemy: %s (%d units)\n", horde.getId(), horde.getSize()));
+        log.append(String.format("Starting distance: %d\n\n", distance));
+
+        StringBuilder turnLog = new StringBuilder();
+        Map<String, Integer> totalMarineWeaponDamage = new LinkedHashMap<>();
+        Map<String, Integer> totalMarineKillsByType = new LinkedHashMap<>();
+        int totalMarineDown = 0;
+
+        // Pre-battle: print squad equipment
+        turnLog.append("--- Squad Equipment ---\n");
+        for (MarineUnit m : squad.getAllMarines()) {
+            String rh = m.getRightHand() != null ? m.getRightHand().getName() : "—";
+            String lh = m.getLeftHand() != null ? m.getLeftHand().getName() : "—";
+            String arm = m.getArmorKit() != null ? m.getArmorKit().getName() : "—";
+            turnLog.append(String.format("  %-10s [%s] RH: %-16s LH: %-16s Armour: %s\n",
+                    m.getName(), m.getRole(), rh, lh, arm));
+        }
+        turnLog.append("\n");
+
+        // Print enemy composition
+        turnLog.append("--- Enemy Composition ---\n");
+        Map<String, Long> enemyCount = new LinkedHashMap<>();
+        for (var unit : horde.getUnits()) {
+            enemyCount.merge(unit.getTypeId(), 1L, Long::sum);
+        }
+        for (var entry : enemyCount.entrySet()) {
+            turnLog.append(String.format("  %s: %d\n", entry.getKey(), entry.getValue()));
+        }
+        turnLog.append("\n");
+
+        while (distance >= 0 && !horde.isEmpty() && getAvailableCount(squad) > 0) {
+            turn++;
+
+            // --- Player Phase ---
+            if (distance > 0) {
+                // Ranged
+                CombatReport report = BattleSystem.squadRangedAttack(squad, horde, distance, false);
+                recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+            } else {
+                // Melee
+                CombatReport meleeReport = BattleSystem.squadMeleeAttack(squad, horde);
+                recordMarineResults(meleeReport, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+            }
+
+            horde.removeDeadUnits();
+
+            // --- Enemy Phase ---
+            if (!horde.isEmpty()) {
+                CombatReport enemyReport = BattleSystem.hordeAttacksSquad(horde, squad, distance);
+                totalMarineDown += enemyReport.getTotalCasualties();
+                for (String casualty : enemyReport.getMarineCasualties()) {
+                    turnLog.append(String.format("  [CASUALTY] %s\n", casualty));
+                }
+            }
+
+            turnLog.append("  Enemy remaining:\n");
+            Map<String, Integer> enemyStatus = new LinkedHashMap<>();
+            for (EnemyUnit unit : horde.getUnits()) {
+                if (unit.getCurrentWounds() > 0) {
+                    enemyStatus.merge(unit.getTypeId(), 1, Integer::sum);
+                }
+            }
+            for (var entry : enemyStatus.entrySet()) {
+                turnLog.append(String.format("    %s: %d\n", entry.getKey(), entry.getValue()));
+            }
+            turnLog.append("  Squad health:\n");
+            for (MarineUnit m : squad.getAllMarines()) {
+                String name = m.getName();
+                String status;
+                if (m.getCurrentWounds() <= 0) {
+                    status = "DOWN";
+                } else {
+                    int hpPercent = Math.round((float) m.getCurrentWounds() / m.getWounds() * 100);
+                    status = String.format("%d%% (%d/%d)", hpPercent, m.getCurrentWounds(), m.getWounds());
+                }
+                turnLog.append(String.format("    %s: %s\n", name, status));
+            }
+
+            // Log turn — show actual combat-ready marines
+            int alive = getAvailableCount(squad);
+            turnLog.append(String.format("--- Turn %d (Distance: %d) ---\n", turn, distance));
+            turnLog.append(String.format("  Marines: %d/%d combat-ready, Enemies: %d alive\n",
+                    alive, squad.getSize(), horde.getSize()));
+            turnLog.append("\n");
+
+            // Move closer
+            if (distance > 0) distance--;
+
+            if (turn > 50) break;
+        }
+
+        log.append(turnLog);
+
+        // === Weapon Damage Summary ===
+        log.append("======= Marine Weapon Damage =======\n");
+        for (var entry : totalMarineWeaponDamage.entrySet()) {
+            log.append(String.format("  %s: %d total damage\n", entry.getKey(), entry.getValue()));
+        }
+
+        // === Kill Summary ===
+        log.append("\n======= Kills by Enemy Type =======\n");
+        int totalKills = 0;
+        for (var entry : totalMarineKillsByType.entrySet()) {
+            log.append(String.format("  %s: %d\n", entry.getKey(), entry.getValue()));
+            totalKills += entry.getValue();
+        }
+
+        // === Outcome ===
+        log.append("\n======= Battle Outcome =======\n");
+        if (horde.isEmpty()) {
+            log.append("VICTORY: Enemy horde destroyed!\n");
+        } else {
+            log.append("DEFEAT: Squad overrun!\n");
+        }
+        log.append(String.format("Turns fought: %d\n", turn));
+        log.append(String.format("Marines combat-ready: %d/%d\n", getAvailableCount(squad), squad.getSize()));
+        log.append(String.format("Enemies remaining: %d\n", horde.getSize()));
+        log.append(String.format("Marines down: %d\n", totalMarineDown));
+        log.append(String.format("Enemies killed: %d\n", totalKills));
+
+        // Write to file
+        try (PrintWriter writer = new PrintWriter(new OutputStreamWriter(
+                new FileOutputStream("battle_report.txt"), StandardCharsets.UTF_8))) {
+            writer.print(log);
+        }
+
+        System.out.println("Done! Battle report written to battle_report.txt");
+    }
+
+    private static void recordMarineResults(CombatReport report,
+                                            Map<String, Integer> weaponDmg,
+                                            Map<String, Integer> killsByType,
+                                            StringBuilder turnLog) {
+        for (AttackReport rec : report.getAttackRecords()) {
+            weaponDmg.merge(rec.getWeaponKey(), rec.getDamage(), Integer::sum);
+        }
+        Map<String, Long> kills = report.getKillsByTargetType();
+        for (var entry : kills.entrySet()) {
+            killsByType.merge(entry.getKey(), entry.getValue().intValue(), Integer::sum);
+        }
+        for (String ev : report.getOverheatEvents()) {
+            turnLog.append("  [OVERHEAT] ").append(ev).append("\n");
+        }
+    }
+
+    private static int getAvailableCount(Squad squad) {
+        int count = 0;
+        for (MarineUnit m : squad.getAllMarines()) {
+            if (m.isAvailable() && m.getCurrentWounds() > 0) count++;
+        }
+        return count;
+    }
+
+    // ==================== Data Loading ====================
+
+    private static Map<String, WeaponItem> loadWeapons(String path) throws Exception {
+        try (InputStream is = SquadBattleTest.class.getClassLoader().getResourceAsStream(path)) {
+            if (is == null) throw new FileNotFoundException(path + " not found");
+            String json = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            Gson gson = new Gson();
+            Type mapType = new TypeToken<Map<String, WeaponItem>>() {}.getType();
+            return gson.fromJson(json, mapType);
+        }
+    }
+
+    private static Map<String, ArmourItem> loadArmours(String path) throws Exception {
+        try (InputStream is = SquadBattleTest.class.getClassLoader().getResourceAsStream(path)) {
+            if (is == null) throw new FileNotFoundException(path + " not found");
+            String json = new String(is.readAllBytes(), StandardCharsets.UTF_8);
+            Gson gson = new Gson();
+            Type mapType = new TypeToken<Map<String, ArmourItem>>() {}.getType();
+            return gson.fromJson(json, mapType);
+        }
+    }
+}

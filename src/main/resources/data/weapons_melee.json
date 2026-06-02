@@ -1,0 +1,121 @@
+{
+  "combat_knife": {
+    "name": "Combat Knife",
+    "damage": 22,
+    "armourPenetration": 0,
+    "attacks": 3,
+    "traits": ["finesse"]
+  },
+  "chainsword": {
+    "name": "Chainsword",
+    "damage": 30,
+    "armourPenetration": 1,
+    "attacks": 2,
+    "traits": ["balanced"]
+  },
+  "power_sword": {
+    "name": "Power Sword",
+    "damage": 35,
+    "armourPenetration": 7,
+    "attacks": 2,
+    "traits": ["balanced"]
+  },
+  "power_axe": {
+    "name": "Power Axe",
+    "damage": 45,
+    "armourPenetration": 5,
+    "attacks": 1,
+    "traits": ["brutal"]
+  },
+  "thunder_hammer": {
+    "name": "Thunder Hammer",
+    "damage": 75,
+    "armourPenetration": 12,
+    "attacks": 1,
+    "traits": ["brutal"]
+  },
+  "power_fist": {
+    "name": "Power Fist",
+    "damage": 65,
+    "armourPenetration": 12,
+    "attacks": 1,
+    "traits": ["brutal"]
+  },
+  "lightning_claw": {
+    "name": "Lightning Claw",
+    "damage": 35,
+    "armourPenetration": 5,
+    "attacks": 3,
+    "traits": ["finesse"]
+  },
+  "crozius_arcanum": {
+    "name": "Crozius Arcanum",
+    "damage": 50,
+    "armourPenetration": 8,
+    "attacks": 2,
+    "traits": ["brutal"]
+  },
+  "omnissian_axe": {
+    "name": "Omnissian Axe",
+    "damage": 50,
+    "armourPenetration": 6,
+    "attacks": 2,
+    "traits": ["brutal"]
+  },
+  "company_standard": {
+    "name": "Company Standard",
+    "damage": 15,
+    "armourPenetration": 0,
+    "attacks": 1,
+    "traits": ["balanced", "banner"]
+  },
+  "combat_blade": {
+    "name": "Combat Blade",
+    "damage": 12,
+    "armourPenetration": 0,
+    "attacks": 2,
+    "traits": ["finesse"]
+  },
+  "bayonet": {
+    "name": "Bayonet",
+    "damage": 16,
+    "armourPenetration": 0,
+    "attacks": 1,
+    "traits": ["balanced"]
+  },
+  "assault_blade": {
+    "name": "Assault Blade",
+    "damage": 20,
+    "armourPenetration": 1,
+    "attacks": 3,
+    "traits": ["balanced"]
+  },
+  "heavy_combat_sword": {
+    "name": "Heavy Combat Sword",
+    "damage": 30,
+    "armourPenetration": 5,
+    "attacks": 2,
+    "traits": ["balanced"]
+  },
+  "daemon_claws": {
+    "name": "Daemon Claws",
+    "damage": 32,
+    "armourPenetration": 4,
+    "attacks": 3,
+    "traits": ["brutal"]
+  },
+  "force_staff": {
+    "name": "Force Staff",
+    "damage": 32,
+    "armourPenetration": 4,
+    "attacks": 2,
+    "traits": ["balanced"]
+  },
+  "master_crafted_weapon": {
+    "name": "Master-Crafted Weapon",
+    "damage": 40,
+    "armourPenetration": 6,
+    "attacks": 2,
+    "traits": ["brutal"]
+  }
+}

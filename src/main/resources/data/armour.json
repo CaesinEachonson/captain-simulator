@@ -1,0 +1,52 @@
+{
+  "mk_ii_power_armour": {
+    "name": "MK II Crusade",
+    "armourValue": 18,
+    "traits": ["relic"]
+  },
+  "mk_iii_power_armour": {
+    "name": "MK III Iron",
+    "armourValue": 26,
+    "traits": ["relic"]
+  },
+  "mk_iv_power_armour": {
+    "name": "MK IV Maximus",
+    "armourValue": 22,
+    "traits": []
+  },
+  "mk_v_power_armour": {
+    "name": "MK V Heresy",
+    "armourValue": 16,
+    "traits": ["degraded"]
+  },
+  "mk_vi_power_armour": {
+    "name": "MK VI Corvus",
+    "armourValue": 18,
+    "traits": ["silent"]
+  },
+  "mk_vii_power_armour": {
+    "name": "MK VII Aquila",
+    "armourValue": 20,
+    "traits": ["standard"]
+  },
+  "mk_viii_power_armour": {
+    "name": "MK VIII Errant",
+    "armourValue": 23,
+    "traits": ["improved_neck_guard"]
+  },
+  "terminator_armour": {
+    "name": "Terminator Armour",
+    "armourValue": 50,
+    "traits": ["bulky", "invulnerable_save"]
+  },
+  "artificer_armour": {
+    "name": "Artificer Armour",
+    "armourValue": 28,
+    "traits": ["master_crafted"]
+  },
+  "scout_armour": {
+    "name": "Scout Armour",
+    "armourValue": 12,
+    "traits": ["light", "stealth"]
+  }
+}

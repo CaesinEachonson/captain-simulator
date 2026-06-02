@@ -1,0 +1,153 @@
+======= Squad Battle Report =======
+Squad: Assault Squad test_assault_squad "Test" (10 marines)
+Enemy: enemy_force (208 units)
+Starting distance: 3
+
+--- Squad Equipment ---
+  Caledonius [SERGEANT] RH: Lightning Claw   LH: Plasma Pistol    Armour: MK VIII Errant
+  Cilnius    [ASSAULT] RH: Chainsword       LH: Grav Pistol      Armour: MK VI Corvus
+  Bassianus  [ASSAULT] RH: Lightning Claw   LH: Bolt Pistol      Armour: MK VIII Errant
+  Romilius   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VIII Errant
+  Clinias    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK V Heresy
+  Classicianus [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
+  Maximus    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK V Heresy
+  Cetrionus  [ASSAULT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VI Corvus
+  Capitolinus [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
+  Constantius [ASSAULT] RH: Lightning Claw   LH: Bolt Pistol      Armour: MK VI Corvus
+
+--- Enemy Composition ---
+  cultist: 120
+  traitor_guardsman: 80
+  possessed: 1
+  raptor: 3
+  chaos_biker: 1
+  chaos_marine: 1
+  cultist_champion: 2
+
+  Enemy remaining:
+    cultist: 113
+    traitor_guardsman: 76
+    possessed: 1
+    raptor: 3
+    chaos_biker: 1
+    chaos_marine: 1
+    cultist_champion: 2
+  Squad health:
+    Caledonius: 75% (81/108)
+    Cilnius: 80% (88/110)
+    Bassianus: 79% (95/120)
+    Romilius: 92% (119/130)
+    Clinias: 68% (76/112)
+    Classicianus: 88% (97/110)
+    Maximus: 60% (62/104)
+    Cetrionus: 75% (87/116)
+    Capitolinus: 84% (104/124)
+    Constantius: 67% (70/104)
+--- Turn 1 (Distance: 3) ---
+  Marines: 10/10 combat-ready, Enemies: 197 alive
+
+  [OVERHEAT] Cetrionus overheated for 10
+  Enemy remaining:
+    cultist: 106
+    traitor_guardsman: 73
+    possessed: 1
+    raptor: 3
+    chaos_biker: 1
+    cultist_champion: 2
+  Squad health:
+    Caledonius: 50% (54/108)
+    Cilnius: 45% (50/110)
+    Bassianus: 71% (85/120)
+    Romilius: 77% (100/130)
+    Clinias: 58% (65/112)
+    Classicianus: 70% (77/110)
+    Maximus: 18% (19/104)
+    Cetrionus: 49% (57/116)
+    Capitolinus: 63% (78/124)
+    Constantius: 62% (64/104)
+--- Turn 2 (Distance: 2) ---
+  Marines: 10/10 combat-ready, Enemies: 186 alive
+
+  [CASUALTY] Cilnius
+  [CASUALTY] Bassianus
+  [CASUALTY] Cetrionus
+  [CASUALTY] Maximus
+  Enemy remaining:
+    cultist: 98
+    traitor_guardsman: 63
+    possessed: 1
+    raptor: 3
+    chaos_biker: 1
+    cultist_champion: 2
+  Squad health:
+    Caledonius: 4% (4/108)
+    Cilnius: DOWN
+    Bassianus: DOWN
+    Romilius: 37% (48/130)
+    Clinias: 17% (19/112)
+    Classicianus: 5% (5/110)
+    Maximus: DOWN
+    Cetrionus: DOWN
+    Capitolinus: 31% (38/124)
+    Constantius: 60% (62/104)
+--- Turn 3 (Distance: 1) ---
+  Marines: 6/10 combat-ready, Enemies: 168 alive
+
+  [CASUALTY] Classicianus
+  [CASUALTY] Clinias
+  [CASUALTY] Constantius
+  [CASUALTY] Caledonius
+  [CASUALTY] Capitolinus
+  [CASUALTY] Romilius
+  Enemy remaining:
+    cultist: 88
+    traitor_guardsman: 54
+    possessed: 1
+    raptor: 3
+    chaos_biker: 1
+    cultist_champion: 1
+  Squad health:
+    Caledonius: DOWN
+    Cilnius: DOWN
+    Bassianus: DOWN
+    Romilius: DOWN
+    Clinias: DOWN
+    Classicianus: DOWN
+    Maximus: DOWN
+    Cetrionus: DOWN
+    Capitolinus: DOWN
+    Constantius: DOWN
+--- Turn 4 (Distance: 0) ---
+  Marines: 0/10 combat-ready, Enemies: 148 alive
+
+======= Marine Weapon Damage =======
+  Caledonius/Plasma Pistol/L: 252 total damage
+  Cilnius/Grav Pistol/L: 180 total damage
+  Bassianus/Bolt Pistol/L: 152 total damage
+  Romilius/Bolt Pistol/L: 190 total damage
+  Clinias/Bolt Pistol/L: 190 total damage
+  Classicianus/Bolt Pistol/L: 180 total damage
+  Maximus/Bolt Pistol/L: 152 total damage
+  Cetrionus/Plasma Pistol/L: 192 total damage
+  Capitolinus/Bolt Pistol/L: 181 total damage
+  Constantius/Bolt Pistol/L: 195 total damage
+  Caledonius/Lightning Claw/M: 570 total damage
+  Romilius/Chainsword/M: 222 total damage
+  Clinias/Chainsword/M: 238 total damage
+  Classicianus/Chainsword/M: 228 total damage
+  Capitolinus/Chainsword/M: 216 total damage
+  Constantius/Lightning Claw/M: 582 total damage
+
+======= Kills by Enemy Type =======
+  cultist: 32
+  traitor_guardsman: 26
+  chaos_marine: 1
+  cultist_champion: 1
+
+======= Battle Outcome =======
+DEFEAT: Squad overrun!
+Turns fought: 4
+Marines combat-ready: 0/10
+Enemies remaining: 148
+Marines down: 10
+Enemies killed: 60

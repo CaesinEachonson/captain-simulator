@@ -1,0 +1,134 @@
+======= 3rd Company Roster =======
+World Origin: CIVILIZED
+
+=== Command Squad CMD-1 "Emperor's Shields" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Cancellarius         CAPTAIN              Inferno Pistol   Power Sword      MK VIII Power Armour  70  74  60  64  59  66  60  74 343
+2   Bonifacius           CHAPLAIN             Grav Pistol      Crozius Arcanum  MK VII Power Armour   67  73  65  65  65  66  64  56 278
+3   Helvius              TECHMARINE           Inferno Pistol   Omnissian Axe    MK VII Power Armour   65  69  62  66  64  50  53  59 203
+4   Otho                 APOTHECARY           Bolt Pistol      Chainsword       MK V Power Armour     77  76  60  66  61  68  63  73 339
+5   Cossinius            COMPANY_CHAMPION     Power Sword      Bolt Pistol      MK VI Power Armour    61  71  63  60  56  60  59  61 213
+6   Latinus              ANCIENT              Bolt Gun         Company Standard MK VI Power Armour    65  74  56  52  69  53  50  59 202
+7   Clarus               VETERAN              Plasma Pistol    Chainsword       MK VII Power Armour   75  72  57  69  65  59  59  65 248
+8   Arcadius             VETERAN              Melta Gun        Chainsword       MK V Power Armour     66  75  69  62  57  55  59  61 199
+9   Chariovalda          VETERAN              Plasma Pistol    Chainsword       MK V Power Armour     69  73  59  62  63  62  54  60 227
+10  Bona                 VETERAN              Chainsword       Inferno Pistol   MK VII Power Armour   70  74  68  64  65  54  64  59 230
+
+=== Tactical Squad TAC-1 "Iron Champions" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Quintus              SERGEANT             Power Sword      Plasma Pistol    MK VII Power Armour   64  66  61  68  62  52  56  49 160
+2   Alcibiades           TACTICAL             Bolt Gun         Combat Knife     MK V Power Armour     59  55  51  55  60  40  53  51  90
+3   Plautus              TACTICAL             Combat Knife     Melta Gun        MK VII Power Armour   52  55  63  51  61  51  48  52  80
+4   Chalcis              TACTICAL             Bolt Gun         Combat Knife     MK VI Power Armour    59  64  61  54  63  45  52  55  83
+5   Concordius           TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   68  58  50  55  58  43  50  59  88
+6   Augustulus           TACTICAL             Multi Melta      Combat Knife     MK VII Power Armour   65  59  57  63  58  48  50  53  84
+7   Severus              TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   62  56  55  53  59  49  49  49  87
+8   Celsus               TACTICAL             Combat Knife     Bolt Gun         MK VI Power Armour    53  66  49  50  55  50  49  48  87
+9   Taurus               TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   57  54  53  63  60  55  53  54  88
+10  Hadrian              TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   59  63  60  56  57  53  41  53  84
+
+=== Tactical Squad TAC-2 "Faithful Guard" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Cogitatus            SERGEANT             Combat Knife     Grav Pistol      MK VII Power Armour   67  70  68  61  66  54  52  58 191
+2   Justinian            TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   64  58  51  56  59  55  51  58  85
+3   Rogatianus           TACTICAL             Bolt Gun         Combat Knife     MK VIII Power Armour  58  63  59  49  61  54  55  56  83
+4   Calpurnius           TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   67  56  58  54  63  48  49  61  85
+5   Octavian             TACTICAL             Combat Knife     Bolt Gun         MK IV Power Armour    56  61  63  52  61  49  47  62  89
+6   Cineas               TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   57  69  53  58  57  54  48  55  88
+7   Cervidius            TACTICAL             Bolt Gun         Combat Knife     MK VIII Power Armour  59  52  54  56  58  47  49  59  81
+8   Cleanthes            TACTICAL             Combat Knife     Plasma Cannon    MK VI Power Armour    61  58  59  50  58  43  53  57  81
+9   Cimber               TACTICAL             Combat Knife     Bolt Gun         MK VI Power Armour    56  60  59  58  54  55  54  60  83
+10  Clitarchus           TACTICAL             Combat Knife     Melta Gun        MK VII Power Armour   59  54  56  62  60  50  53  48  84
+
+=== Tactical Squad TAC-3 "Stone Wardens" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Asprenas             SERGEANT             Plasma Pistol    Lightning Claw   MK VIII Power Armour  72  71  53  56  64  49  50  55 120
+2   Bassianus            TACTICAL             Combat Knife     Melta Gun        MK VIII Power Armour  61  64  54  56  59  46  48  50  87
+3   Sempronius           TACTICAL             Bolt Gun         Combat Knife     MK VI Power Armour    53  63  54  59  65  44  51  47  80
+4   Horatius             TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   54  57  57  58  54  49  44  58  90
+5   Accius               TACTICAL             Grav Cannon      Combat Knife     MK VIII Power Armour  67  64  49  51  57  47  46  53  86
+6   Coccceianus          TACTICAL             Bolt Gun         Combat Knife     MK VIII Power Armour  64  55  55  60  57  54  55  48  82
+7   Cervonius            TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   53  53  58  58  65  50  51  51  88
+8   Cornac               TACTICAL             Bolt Gun         Combat Knife     MK V Power Armour     64  54  56  54  61  48  50  52  83
+9   Carsius              TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   61  68  59  53  51  42  47  51  86
+10  Carlovicus           TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   66  56  56  60  62  42  49  53  90
+
+=== Tactical Squad TAC-4 "Faithful Guard" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Volusius             SERGEANT             Power Fist       Plasma Pistol    MK VII Power Armour   69  58  55  58  59  52  44  58 120
+2   Arminius             TACTICAL             Combat Knife     Grav Cannon      MK VII Power Armour   52  59  55  49  56  50  52  56  81
+3   Alexianus            TACTICAL             Combat Knife     Bolt Gun         MK IV Power Armour    59  57  55  58  55  47  43  50  81
+4   Clitomachus          TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   56  55  51  61  62  46  43  54  84
+5   Decimus              TACTICAL             Combat Knife     Bolt Gun         MK IV Power Armour    60  55  52  55  62  49  46  60  89
+6   Blandus              TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   67  70  56  56  65  54  46  62  85
+7   Paulus               TACTICAL             Plasma Gun       Combat Knife     MK VII Power Armour   53  57  47  53  61  49  42  50  84
+8   Asclepiodotus        TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   58  61  54  61  66  50  45  54  88
+9   Julius               TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   65  61  57  60  56  54  50  56  89
+10  Gracchus             TACTICAL             Bolt Gun         Combat Knife     MK IV Power Armour    64  59  54  61  64  53  45  55  84
+
+=== Tactical Squad TAC-5 "Stone Wardens" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Ferox                SERGEANT             Power Sword      Inferno Pistol   MK VII Power Armour   64  68  67  62  66  56  50  68 177
+2   Cleoxenus            TACTICAL             Bolt Gun         Combat Knife     MK VI Power Armour    59  57  62  57  57  50  53  60  86
+3   Alaricus             TACTICAL             Combat Knife     Bolt Gun         MK VII Power Armour   56  62  60  50  58  49  46  60  84
+4   Geganius             TACTICAL             Combat Knife     Bolt Gun         MK VI Power Armour    67  55  65  56  64  52  49  56  88
+5   Optatus              TACTICAL             Grav Gun         Combat Knife     MK VII Power Armour   63  66  55  58  50  45  46  48  89
+6   Rufus                TACTICAL             Combat Knife     Bolt Gun         MK V Power Armour     61  59  58  58  52  50  47  53  81
+7   Montanus             TACTICAL             Bolt Gun         Combat Knife     MK VII Power Armour   61  58  56  53  58  41  53  55  85
+8   Anastasius           TACTICAL             Combat Knife     Grav Cannon      MK VII Power Armour   58  58  54  53  53  55  41  51  82
+9   Laurentius           TACTICAL             Combat Knife     Bolt Gun         MK VIII Power Armour  52  60  48  63  61  58  55  53  81
+10  Britannicus          TACTICAL             Bolt Gun         Combat Knife     MK VIII Power Armour  64  63  58  60  65  49  54  48  86
+
+=== Assault Squad ASLT-1 "Crimson Lions" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Menenius             SERGEANT             Bolt Pistol      Combat Knife     MK V Power Armour     62  71  58  67  62  56  49  51 151
+2   Caecilius            ASSAULT              Bolt Pistol      Power Fist       MK VII Power Armour   67  68  60  62  61  45  47  54  80
+3   Ofonius              ASSAULT              Bolt Pistol      Power Sword      MK VII Power Armour   55  60  53  64  57  53  50  59  89
+4   Cassianus            ASSAULT              Bolt Pistol      Chainsword       MK VI Power Armour    58  57  56  59  57  49  45  54  81
+5   Cato                 ASSAULT              Chainsword       Grav Pistol      MK VII Power Armour   63  56  55  60  54  50  43  48  87
+6   Minucius             ASSAULT              Chainsword       Bolt Pistol      MK VII Power Armour   58  66  55  54  60  50  49  51  87
+7   Caesellius           ASSAULT              Chainsword       Bolt Pistol      MK VII Power Armour   55  69  57  55  65  52  49  53  90
+8   Petronius            ASSAULT              Bolt Pistol      Chainsword       MK VIII Power Armour  58  53  55  57  53  48  43  53  82
+9   Caestus              ASSAULT              Chainsword       Plasma Pistol    MK VII Power Armour   58  55  63  55  67  48  47  52  82
+10  Cordus               ASSAULT              Bolt Pistol      Chainsword       MK V Power Armour     63  62  57  51  66  47  45  56  86
+
+=== Assault Squad ASLT-2 "Iron Maw" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Clavatus             SERGEANT             Power Sword      Inferno Pistol   MK VIII Power Armour  62  70  59  59  66  50  51  65 160
+2   Metellus             ASSAULT              Chainsword       Bolt Pistol      MK VIII Power Armour  60  68  53  54  52  50  43  48  89
+3   Patricius            ASSAULT              Chainsword       Plasma Pistol    MK IV Power Armour    54  57  62  54  60  50  46  52  82
+4   Faustus              ASSAULT              Bolt Pistol      Chainsword       MK VII Power Armour   59  62  59  53  60  57  45  55  85
+5   Haterius             ASSAULT              Bolt Pistol      Chainsword       MK VI Power Armour    61  65  56  65  53  45  55  47  88
+6   Attalus              ASSAULT              Bolt Pistol      Chainsword       MK VII Power Armour   59  61  55  58  54  42  47  51  88
+7   Rusticus             ASSAULT              Chainsword       Grav Pistol      MK VII Power Armour   63  60  59  59  52  45  54  53  89
+8   Maximus              ASSAULT              Bolt Pistol      Chainsword       MK VI Power Armour    57  67  55  50  58  49  49  60  83
+9   Chlorus              ASSAULT              Bolt Pistol      Power Axe        MK V Power Armour     59  63  59  50  55  48  45  56  80
+10  Conventus            ASSAULT              Power Sword      Bolt Pistol      MK VII Power Armour   62  58  55  56  53  45  48  52  80
+
+=== Devastator Squad DEV-1 "Steel Reapers" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Domitian             SERGEANT             Inferno Pistol   Power Sword      MK VI Power Armour    70  73  61  56  57  53  53  57 154
+2   Hortensius           DEVASTATOR           Combat Knife     Bolt Gun         MK VII Power Armour   57  59  53  58  59  44  47  54  83
+3   Arulenus             DEVASTATOR           Bolt Gun         Combat Knife     MK IV Power Armour    61  68  58  63  57  50  50  55  85
+4   Salvius              DEVASTATOR           Multi Melta      Combat Knife     MK V Power Armour     55  62  55  60  58  47  44  54  88
+5   Cinna                DEVASTATOR           Bolt Gun         Combat Knife     MK VII Power Armour   63  59  62  55  54  54  48  50  86
+6   Cohors               DEVASTATOR           Heavy Bolt Gun   Combat Knife     MK IV Power Armour    60  61  57  61  53  50  46  57  89
+7   Cerius               DEVASTATOR           Combat Knife     Bolt Gun         MK VII Power Armour   63  56  53  52  58  51  57  61  87
+8   Sextus               DEVASTATOR           Plasma Cannon    Combat Knife     MK VIII Power Armour  64  69  56  52  66  51  57  50  80
+9   Conradus             DEVASTATOR           Plasma Cannon    Combat Knife     MK V Power Armour     59  64  48  49  56  58  52  62  89
+10  Bonosus              DEVASTATOR           Combat Knife     Bolt Gun         MK VIII Power Armour  64  55  59  55  65  41  53  61  80
+
+=== Devastator Squad DEV-2 "Grey Knights" === (10 marines)
+#   Name                 Role                 Right Hand       Left Hand        Armour               WS  BS   S   T  Ag Int  WP Fel  Lv
+1   Fabricius            SERGEANT             Grav Pistol      Chainsword       MK V Power Armour     60  79  63  55  62  60  46  53 174
+2   Lappius              DEVASTATOR           Combat Knife     Bolt Gun         MK VII Power Armour   52  55  58  56  62  42  49  50  84
+3   Britannicus          DEVASTATOR           Combat Knife     Bolt Gun         MK VII Power Armour   68  58  53  59  62  52  56  51  88
+4   Coronius             DEVASTATOR           Grav Cannon      Combat Knife     MK VI Power Armour    61  56  59  53  58  49  53  51  81
+5   Chaucus              DEVASTATOR           Combat Knife     Bolt Gun         MK V Power Armour     54  61  58  56  59  48  52  53  84
+6   Caesius              DEVASTATOR           Plasma Cannon    Combat Knife     MK VII Power Armour   62  61  58  58  55  48  49  55  84
+7   Cornelianus          DEVASTATOR           Combat Knife     Heavy Bolt Gun   MK VIII Power Armour  63  52  60  63  57  53  58  49  81
+8   Constantinus         DEVASTATOR           Combat Knife     Bolt Gun         MK VII Power Armour   65  63  52  54  49  43  51  62  87
+9   Chelidon             DEVASTATOR           Combat Knife     Heavy Bolt Gun   MK VII Power Armour   65  60  59  65  60  45  44  59  80
+10  Gallonius            DEVASTATOR           Combat Knife     Bolt Gun         MK V Power Armour     56  60  49  58  60  43  48  52  84
+
+Total Marines: 100
