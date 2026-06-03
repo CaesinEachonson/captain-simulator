@@ -16,12 +16,14 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.captainsim.squad.Squad;
 import org.captainsim.squad.SquadType;
+import org.captainsim.util.EquipmentDistributor;
 
 import java.io.*;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.stream.Collectors;
 
 public class SquadBattleTest {
 
@@ -31,7 +33,7 @@ public class SquadBattleTest {
     private static final boolean USE_CUSTOM_ENEMY = true;
     private static final int ENEMY_STRENGTH = 1200;
     private static final int ENEMY_THREAT = 2;
-    private static final int COMBAT_DISTANCE = 3;
+    private static final int COMBAT_DISTANCE = 1;
 
     // ==================== Main ====================
 
@@ -214,15 +216,17 @@ public class SquadBattleTest {
         while (distance >= 0 && !horde.isEmpty() && getAvailableCount(squad) > 0) {
             turn++;
 
+            turnLog.append(String.format("--- Turn %d (Distance: %d) ---\n", turn, distance));
+
             // --- Player Phase ---
             if (distance > 0) {
-                // Ranged
                 CombatReport report = BattleSystem.squadRangedAttack(squad, horde, distance, false);
+                printMarineAttackDetails(report, turnLog, "Marines Ranged");
                 recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
             } else {
-                // Melee
-                CombatReport meleeReport = BattleSystem.squadMeleeAttack(squad, horde);
-                recordMarineResults(meleeReport, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+                CombatReport report = BattleSystem.squadMeleeAttack(squad, horde);
+                printMarineAttackDetails(report, turnLog, "Marines Melee");
+                recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
             }
 
             horde.removeDeadUnits();
@@ -230,41 +234,18 @@ public class SquadBattleTest {
             // --- Enemy Phase ---
             if (!horde.isEmpty()) {
                 CombatReport enemyReport = BattleSystem.hordeAttacksSquad(horde, squad, distance);
+                printEnemyAttackDetails(enemyReport, turnLog);
                 totalMarineDown += enemyReport.getTotalCasualties();
                 for (String casualty : enemyReport.getMarineCasualties()) {
-                    turnLog.append(String.format("  [CASUALTY] %s\n", casualty));
+                    turnLog.append(String.format("    [CASUALTY] %s\n", casualty));
                 }
             }
 
-            turnLog.append("  Enemy remaining:\n");
-            Map<String, Integer> enemyStatus = new LinkedHashMap<>();
-            for (EnemyUnit unit : horde.getUnits()) {
-                if (unit.getCurrentWounds() > 0) {
-                    enemyStatus.merge(unit.getTypeId(), 1, Integer::sum);
-                }
-            }
-            for (var entry : enemyStatus.entrySet()) {
-                turnLog.append(String.format("    %s: %d\n", entry.getKey(), entry.getValue()));
-            }
-            turnLog.append("  Squad health:\n");
-            for (MarineUnit m : squad.getAllMarines()) {
-                String name = m.getName();
-                String status;
-                if (m.getCurrentWounds() <= 0) {
-                    status = "DOWN";
-                } else {
-                    int hpPercent = Math.round((float) m.getCurrentWounds() / m.getWounds() * 100);
-                    status = String.format("%d%% (%d/%d)", hpPercent, m.getCurrentWounds(), m.getWounds());
-                }
-                turnLog.append(String.format("    %s: %s\n", name, status));
-            }
+            // Print squad health
+            printSquadHealth(squad, turnLog);
 
-            // Log turn — show actual combat-ready marines
-            int alive = getAvailableCount(squad);
-            turnLog.append(String.format("--- Turn %d (Distance: %d) ---\n", turn, distance));
-            turnLog.append(String.format("  Marines: %d/%d combat-ready, Enemies: %d alive\n",
-                    alive, squad.getSize(), horde.getSize()));
-            turnLog.append("\n");
+            // Print enemy remaining
+            turnLog.append(String.format("  Enemies remaining: %d\n\n", horde.getSize()));
 
             // Move closer
             if (distance > 0) distance--;
@@ -355,4 +336,76 @@ public class SquadBattleTest {
             return gson.fromJson(json, mapType);
         }
     }
+
+    private static void printMarineAttackDetails(CombatReport report, StringBuilder turnLog, String phaseLabel) {
+        turnLog.append("  ").append(phaseLabel).append(":\n");
+
+        Map<String, List<AttackReport>> byMarine = report.getAttackRecords().stream()
+                .collect(Collectors.groupingBy(
+                        AttackReport::getAttackerName,
+                        LinkedHashMap::new,
+                        Collectors.toList()));
+
+        for (var entry : byMarine.entrySet()) {
+            String name = entry.getKey();
+            String role = entry.getValue().get(0).getAttackerRole();
+
+            Map<String, List<AttackReport>> byWeapon = entry.getValue().stream()
+                    .collect(Collectors.groupingBy(
+                            ar -> ar.getWeaponName() + (ar.isMelee() ? "(M)" : ar.getWeaponSlot().equals("LEFT_HAND") ? "(L)" : "(R)"),
+                            LinkedHashMap::new,
+                            Collectors.toList()));
+
+            StringBuilder sb = new StringBuilder();
+            sb.append(String.format("    %-10s [%s]", name, role));
+            for (var we : byWeapon.entrySet()) {
+                int dmg = we.getValue().stream().mapToInt(AttackReport::getDamage).sum();
+                long kills = we.getValue().stream().filter(AttackReport::isKilled).count();
+                if (dmg > 0) {
+                    sb.append(String.format(" %s: %d dmg %d kill%s",
+                            we.getKey(), dmg, kills, kills == 1 ? "" : "s"));
+                }
+            }
+            turnLog.append(sb.toString()).append("\n");
+        }
+
+        int totalDmg = report.getAttackRecords().stream().mapToInt(AttackReport::getDamage).sum();
+        long totalKills = report.getAttackRecords().stream().filter(AttackReport::isKilled).count();
+        turnLog.append(String.format("    >> Squad total: %d damage, %d kills\n", totalDmg, totalKills));
+    }
+
+    private static void printEnemyAttackDetails(CombatReport report, StringBuilder turnLog) {
+        turnLog.append("  Enemy Phase:\n");
+
+        Map<String, List<AttackReport>> byType = report.getAttackRecords().stream()
+                .collect(Collectors.groupingBy(
+                        AttackReport::getAttackerName,
+                        LinkedHashMap::new,
+                        Collectors.toList()));
+
+        for (var entry : byType.entrySet()) {
+            String type = entry.getKey();
+            int dmg = entry.getValue().stream().mapToInt(AttackReport::getDamage).sum();
+            long kills = entry.getValue().stream().filter(AttackReport::isKilled).count();
+            int hits = entry.getValue().size();
+            turnLog.append(String.format("    %s: %d hits, %d total damage, %d marine%s down\n",
+                    type, hits, dmg, kills, kills == 1 ? "" : "s"));
+        }
+    }
+
+    private static void printSquadHealth(Squad squad, StringBuilder turnLog) {
+        turnLog.append("  Squad health:\n");
+        for (MarineUnit m : squad.getAllMarines()) {
+            String name = m.getName();
+            String status;
+            if (m.getCurrentWounds() <= 0) {
+                status = "DOWN";
+            } else {
+                int hpPercent = Math.round((float) m.getCurrentWounds() / m.getWounds() * 100);
+                status = String.format("%d%% (%d/%d)", hpPercent, m.getCurrentWounds(), m.getWounds());
+            }
+            turnLog.append(String.format("    %-10s %s\n", name, status));
+        }
+    }
+
 }

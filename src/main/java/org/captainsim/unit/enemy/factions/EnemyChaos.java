@@ -28,20 +28,20 @@ public class EnemyChaos {
 
     private static final List<ChaosTemplate> TEMPLATES = List.of(
             // === Troops ===
-            new ChaosTemplate("cultist",             3, 60, "troops", "autogun",       "combat_blade",   null,             25, 25, 25, 25, 25, 15, 15, 15, 5),
-            new ChaosTemplate("traitor_guardsman",   6, 40, "troops", "lasgun",        "bayonet",        null,             30, 30, 30, 30, 25, 20, 20, 20, 6),
+            new ChaosTemplate("cultist",             10, 60, "troops", "autogun",       "combat_blade",   null,             25, 25, 20, 20, 20, 15, 15, 15, 40),
+            new ChaosTemplate("traitor_guardsman",   20, 40, "troops", "lasgun",        "bayonet",        null,             30, 30, 25, 25, 25, 20, 20, 20, 50),
 
             // === Adept ===
-            new ChaosTemplate("chaos_marine",       50, 70, "adept",  "bolt_gun",      "chainsword",     "mk_v_power_armour", 45, 40, 45, 45, 35, 30, 35, 30, 12),
-            new ChaosTemplate("possessed",          60, 30, "adept",  "daemon_claws",  null,             "mk_v_power_armour", 50, 40, 55, 50, 40, 25, 40, 20, 14),
-            new ChaosTemplate("raptor",             45, 40, "adept",  "assault_blade", "bolt_pistol",    "mk_v_power_armour", 45, 35, 40, 40, 50, 25, 30, 25, 10),
-            new ChaosTemplate("chaos_biker",        55, 25, "adept",  "bolt_gun",      "chainsword",     "mk_v_power_armour", 40, 35, 45, 45, 45, 25, 30, 25, 11),
+            new ChaosTemplate("chaos_marine",       50, 70, "adept",  "bolt_gun",      "chainsword",     "mk_v_power_armour", 45, 40, 45, 45, 35, 30, 35, 30, 90),
+            new ChaosTemplate("possessed",          60, 30, "adept",  "daemon_claws",  null,             "mk_v_power_armour", 50, 40, 55, 50, 40, 25, 40, 20, 100),
+            new ChaosTemplate("raptor",             45, 40, "adept",  "assault_blade", "bolt_pistol",    "mk_v_power_armour", 45, 35, 40, 40, 50, 25, 30, 25, 80),
+            new ChaosTemplate("chaos_biker",        55, 25, "adept",  "bolt_gun",      "chainsword",     "mk_v_power_armour", 40, 35, 45, 45, 45, 25, 30, 25, 90),
 
             // === Elites ===
-            new ChaosTemplate("chaos_terminator",  100, 70, "elites","power_fist",    "heavy_war_bolter", "terminator_armour", 55, 50, 55, 55, 40, 35, 45, 35, 20),
-            new ChaosTemplate("cultist_champion",   25, 30, "elites","combat_blade",  "autopistol",     null,             35, 35, 35, 30, 30, 25, 25, 30, 8),
-            new ChaosTemplate("chaos_master",      120, 20, "elites","master_crafted_weapon", "bolt_pistol", "artificer_armour", 60, 55, 55, 55, 45, 45, 50, 45, 22),
-            new ChaosTemplate("chaos_sorcerer",     90, 15, "elites","force_staff",   "bolt_pistol",    "mk_v_power_armour", 40, 40, 40, 40, 35, 55, 55, 40, 16)
+            new ChaosTemplate("chaos_terminator",  100, 70, "elites","power_fist",    "heavy_war_bolter", "terminator_armour", 55, 50, 55, 55, 40, 35, 45, 35, 110),
+            new ChaosTemplate("cultist_champion",   25, 30, "elites","combat_blade",  "autopistol",     null,             35, 35, 35, 30, 30, 25, 25, 30, 60),
+            new ChaosTemplate("chaos_master",      120, 20, "elites","master_crafted_weapon", "bolt_pistol", "artificer_armour", 60, 55, 55, 55, 45, 45, 50, 45, 110),
+            new ChaosTemplate("chaos_sorcerer",     90, 15, "elites","force_staff",   "bolt_pistol",    "mk_v_power_armour", 40, 40, 40, 40, 35, 55, 55, 40, 80)
     );
 
     // ==================== Threat Ratios (7 levels) ====================

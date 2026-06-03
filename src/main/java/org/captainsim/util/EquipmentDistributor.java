@@ -1,4 +1,4 @@
-package org.test;
+package org.captainsim.util;
 
 import org.captainsim.unit.marine.MarineUnit;
 import org.captainsim.item.ArmourItem;

@@ -11,32 +11,32 @@
     "damage": 30,
     "armourPenetration": 1,
     "attacks": 2,
-    "traits": ["balanced"]
+    "traits": ["balanced", "sweep"]
   },
   "power_sword": {
     "name": "Power Sword",
     "damage": 35,
     "armourPenetration": 7,
     "attacks": 2,
-    "traits": ["balanced"]
+    "traits": ["balanced", "sweep"]
   },
   "power_axe": {
     "name": "Power Axe",
     "damage": 45,
     "armourPenetration": 5,
-    "attacks": 1,
-    "traits": ["brutal"]
+    "attacks": 2,
+    "traits": ["brutal", "sweep"]
   },
   "thunder_hammer": {
     "name": "Thunder Hammer",
-    "damage": 75,
+    "damage": 180,
     "armourPenetration": 12,
     "attacks": 1,
     "traits": ["brutal"]
   },
   "power_fist": {
     "name": "Power Fist",
-    "damage": 65,
+    "damage": 140,
     "armourPenetration": 12,
     "attacks": 1,
     "traits": ["brutal"]
@@ -46,18 +46,18 @@
     "damage": 35,
     "armourPenetration": 5,
     "attacks": 3,
-    "traits": ["finesse"]
+    "traits": ["finesse", "sweep"]
   },
   "crozius_arcanum": {
     "name": "Crozius Arcanum",
-    "damage": 50,
+    "damage": 100,
     "armourPenetration": 8,
     "attacks": 2,
     "traits": ["brutal"]
   },
   "omnissian_axe": {
     "name": "Omnissian Axe",
-    "damage": 50,
+    "damage": 100,
     "armourPenetration": 6,
     "attacks": 2,
     "traits": ["brutal"]

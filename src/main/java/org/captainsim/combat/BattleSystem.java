@@ -191,29 +191,59 @@ public class BattleSystem {
 
     private static void swingMeleeWeapon(MarineUnit attacker, WeaponItem weapon, String slot,
                                          Horde horde, CombatReport report) {
-        int attacks = weapon.getAttacks();
+        if (weapon.getTraits().contains("sweep")) {
+            if (horde.isEmpty()) return;
 
-        for (int i = 0; i < attacks; i++) {
-            if (horde.isEmpty()) break;
+            EnemyUnit firstTarget = selectTarget(horde, weapon);
+            if (firstTarget == null) return;
 
-            EnemyUnit target = selectTarget(horde, weapon);
-            if (target == null) break;
+            AttackResolve sample = CombatResolver.calculateSingleMeleeDamage(attacker, weapon, firstTarget);
+            int perHit = sample.getDamage();
+            int remainingDamage = sample.getDamage();
+            while (remainingDamage > 0) {
+                if (horde.isEmpty()) break;
 
-            AttackResolve result = CombatResolver.calculateSingleMeleeDamage(attacker, weapon, target);
-            int dmg = result.getDamage();
+                EnemyUnit target = selectTarget(horde, weapon);
+                if (target == null) break;
 
-            if (dmg > 0) {
-                boolean killed = applyDamageToEnemy(target, dmg);
+                int targetHp = target.getCurrentWounds();
+                int dealt = Math.min(remainingDamage, targetHp);
+                remainingDamage -= dealt;
+
+                boolean killed = applyDamageToEnemy(target, dealt);
                 report.addAttackRecord(new AttackReport(
                         report.getTurnId(), attacker.getName(), attacker.getRole().name(),
                         weapon.getName(), slot, target.getTypeId(),
-                        dmg, killed, false, 0, true));
+                        dealt, killed, false, 0, true));
                 if (killed) {
                     report.addEnemyKillSummary(attacker.getName() + " killed " + target.getTypeId());
                 }
             }
+        } else {
+            int attacks = weapon.getAttacks();
+            for (int i = 0; i < attacks; i++) {
+                if (horde.isEmpty()) break;
+
+                EnemyUnit target = selectTarget(horde, weapon);
+                if (target == null) break;
+
+                AttackResolve result = CombatResolver.calculateSingleMeleeDamage(attacker, weapon, target);
+                int dmg = result.getDamage();
+
+                if (dmg > 0) {
+                    boolean killed = applyDamageToEnemy(target, dmg);
+                    report.addAttackRecord(new AttackReport(
+                            report.getTurnId(), attacker.getName(), attacker.getRole().name(),
+                            weapon.getName(), slot, target.getTypeId(),
+                            dmg, killed, false, 0, true));
+                    if (killed) {
+                        report.addEnemyKillSummary(attacker.getName() + " killed " + target.getTypeId());
+                    }
+                }
+            }
         }
     }
+
 
     // ==================== Damage Application ====================
 
