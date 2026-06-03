@@ -1,141 +1,139 @@
 ======= Squad Battle Report =======
 Squad: Assault Squad test_assault_squad "Test" (10 marines)
-Enemy: enemy_force (69 units)
+Enemy: enemy_force (64 units)
 Starting distance: 2
 
 --- Squad Equipment ---
-  Ofonius    [SERGEANT] RH: Power Fist       LH: Grav Pistol      Armour: MK VII Aquila
-  Avienus    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
-  Columbanus [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
-  Clymenus   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK IV Maximus
-  Cordatus   [ASSAULT] RH: Lightning Claw   LH: Bolt Pistol      Armour: MK VII Aquila
-  Bruccus    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
-  Aquillius  [ASSAULT] RH: Chainsword       LH: Grav Pistol      Armour: MK VIII Errant
-  Verus      [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
-  Fabius     [ASSAULT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VII Aquila
-  Priscus    [ASSAULT] RH: Power Fist       LH: Bolt Pistol      Armour: MK VII Aquila
+  Cotta      [SERGEANT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VII Aquila
+  Caecilius  [ASSAULT] RH: Power Sword      LH: Bolt Pistol      Armour: MK VII Aquila
+  Carbunculus [ASSAULT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VI Corvus
+  Licinius   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
+  Corvinus   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
+  Caesius    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK V Heresy
+  Cocceius   [ASSAULT] RH: Power Sword      LH: Bolt Pistol      Armour: MK VII Aquila
+  Lucretius  [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
+  Chronius   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
+  Cincius    [ASSAULT] RH: Chainsword       LH: Inferno Pistol   Armour: MK VII Aquila
 
 --- Enemy Composition ---
-  cultist: 38
-  traitor_guardsman: 23
-  chaos_marine: 2
-  raptor: 3
-  chaos_biker: 1
+  cultist: 30
+  traitor_guardsman: 27
+  chaos_marine: 4
+  possessed: 1
   cultist_champion: 2
 
 --- Turn 1 (Distance: 2) ---
   Hammer of Wrath:
-    Cordatus   [ASSAULT] Hammer of Wrath(M): 201 dmg 3 kills
-    Priscus    [ASSAULT] Hammer of Wrath(M): 205 dmg 5 kills
-    >> Squad total: 406 damage, 8 kills
+    Caecilius  [ASSAULT] Hammer of Wrath(M): 212 dmg 5 kills
+    Cocceius   [ASSAULT] Hammer of Wrath(M): 197 dmg 4 kills
+    >> Squad total: 409 damage, 9 kills
   Marines Charge Melee:
-    Ofonius    [SERGEANT] Power Fist(M): 268 dmg 1 kill Grav Pistol(L): 60 dmg 1 kill
-    Avienus    [ASSAULT] Chainsword(M): 121 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
-    Columbanus [ASSAULT] Chainsword(M): 113 dmg 2 kills Bolt Pistol(L): 34 dmg 0 kills
-    Clymenus   [ASSAULT] Chainsword(M): 116 dmg 1 kill Bolt Pistol(L): 35 dmg 0 kills
-    Cordatus   [ASSAULT] Lightning Claw(M): 196 dmg 4 kills Bolt Pistol(L): 36 dmg 0 kills
-    Bruccus    [ASSAULT] Chainsword(M): 117 dmg 3 kills Bolt Pistol(L): 38 dmg 0 kills
-    Aquillius  [ASSAULT] Chainsword(M): 112 dmg 2 kills Grav Pistol(L): 64 dmg 0 kills
-    Verus      [ASSAULT] Chainsword(M): 116 dmg 3 kills Bolt Pistol(L): 36 dmg 0 kills
-    Fabius     [ASSAULT] Chainsword(M): 112 dmg 4 kills Plasma Pistol(L): 63 dmg 1 kill
-    Priscus    [ASSAULT] Power Fist(M): 261 dmg 1 kill Bolt Pistol(L): 35 dmg 1 kill
-    >> Squad total: 1969 damage, 26 kills
+    Cotta      [SERGEANT] Chainsword(M): 113 dmg 2 kills Plasma Pistol(L): 67 dmg 1 kill
+    Caecilius  [ASSAULT] Power Sword(M): 137 dmg 1 kill Bolt Pistol(L): 38 dmg 0 kills
+    Carbunculus [ASSAULT] Chainsword(M): 120 dmg 2 kills Plasma Pistol(L): 66 dmg 1 kill
+    Licinius   [ASSAULT] Chainsword(M): 107 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
+    Corvinus   [ASSAULT] Chainsword(M): 113 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
+    Caesius    [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 37 dmg 0 kills
+    Cocceius   [ASSAULT] Power Sword(M): 138 dmg 3 kills Bolt Pistol(L): 24 dmg 0 kills
+    Lucretius  [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
+    Chronius   [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 23 dmg 0 kills
+    Cincius    [ASSAULT] Chainsword(M): 83 dmg 2 kills Inferno Pistol(L): 75 dmg 1 kill
+    >> Squad total: 1588 damage, 25 kills
   Enemy Phase:
-    raptor: 9 hits, 312 total damage, 0 marines down
-    cultist_champion: 2 hits, 4 total damage, 0 marines down
+    possessed: 3 hits, 348 total damage, 2 marines down
+    [CASUALTY] Cincius
+    [CASUALTY] Cocceius
   Squad health:
-    Ofonius    67% (68/102)
-    Avienus    72% (86/120)
-    Columbanus 29% (34/116)
-    Clymenus   77% (92/120)
-    Cordatus   71% (82/116)
-    Bruccus    71% (84/118)
-    Aquillius  100% (104/104)
-    Verus      70% (80/114)
-    Fabius     98% (106/108)
-    Priscus    73% (90/124)
-  Enemies remaining: 35
+    Cotta      100% (110/110)
+    Caecilius  100% (120/120)
+    Carbunculus 100% (110/110)
+    Licinius   100% (114/114)
+    Corvinus   100% (118/118)
+    Caesius    100% (98/98)
+    Cocceius   DOWN
+    Lucretius  100% (102/102)
+    Chronius   100% (100/100)
+    Cincius    DOWN
+  Enemies remaining: 30
 
 --- Turn 2 (Distance: 0) ---
   Marines Melee:
-    Ofonius    [SERGEANT] Power Fist(M): 268 dmg 1 kill Grav Pistol(L): 60 dmg 1 kill
-    Avienus    [ASSAULT] Chainsword(M): 121 dmg 4 kills Bolt Pistol(L): 36 dmg 0 kills
-    Columbanus [ASSAULT] Chainsword(M): 113 dmg 3 kills Bolt Pistol(L): 34 dmg 1 kill
-    Clymenus   [ASSAULT] Chainsword(M): 116 dmg 3 kills Bolt Pistol(L): 35 dmg 0 kills
-    Cordatus   [ASSAULT] Lightning Claw(M): 196 dmg 5 kills Bolt Pistol(L): 36 dmg 0 kills
-    Bruccus    [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 38 dmg 0 kills
-    Aquillius  [ASSAULT] Chainsword(M): 112 dmg 4 kills Grav Pistol(L): 56 dmg 0 kills
-    Verus      [ASSAULT] Chainsword(M): 116 dmg 3 kills Bolt Pistol(L): 36 dmg 1 kill
-    Fabius     [ASSAULT] Chainsword(M): 82 dmg 3 kills Plasma Pistol(L): 63 dmg 1 kill
-    Priscus    [ASSAULT] Power Fist(M): 261 dmg 1 kill Bolt Pistol(L): 21 dmg 0 kills
-    >> Squad total: 1917 damage, 33 kills
+    Cotta      [SERGEANT] Chainsword(M): 113 dmg 2 kills Plasma Pistol(L): 67 dmg 1 kill
+    Caecilius  [ASSAULT] Power Sword(M): 137 dmg 4 kills Bolt Pistol(L): 24 dmg 0 kills
+    Carbunculus [ASSAULT] Chainsword(M): 120 dmg 2 kills Plasma Pistol(L): 66 dmg 1 kill
+    Licinius   [ASSAULT] Chainsword(M): 107 dmg 1 kill Bolt Pistol(L): 22 dmg 1 kill
+    Corvinus   [ASSAULT] Chainsword(M): 113 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
+    Caesius    [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 23 dmg 1 kill
+    Lucretius  [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
+    Chronius   [ASSAULT] Chainsword(M): 111 dmg 3 kills Bolt Pistol(L): 37 dmg 1 kill
+    >> Squad total: 1240 damage, 24 kills
   Enemy Phase:
   Squad health:
-    Ofonius    67% (68/102)
-    Avienus    72% (86/120)
-    Columbanus 29% (34/116)
-    Clymenus   77% (92/120)
-    Cordatus   71% (82/116)
-    Bruccus    71% (84/118)
-    Aquillius  100% (104/104)
-    Verus      70% (80/114)
-    Fabius     98% (106/108)
-    Priscus    73% (90/124)
-  Enemies remaining: 2
+    Cotta      100% (110/110)
+    Caecilius  100% (120/120)
+    Carbunculus 100% (110/110)
+    Licinius   100% (114/114)
+    Corvinus   100% (118/118)
+    Caesius    100% (98/98)
+    Cocceius   DOWN
+    Lucretius  100% (102/102)
+    Chronius   100% (100/100)
+    Cincius    DOWN
+  Enemies remaining: 6
 
 --- Turn 3 (Distance: 0) ---
   Marines Melee:
-    Ofonius    [SERGEANT] Power Fist(M): 268 dmg 1 kill Grav Pistol(L): 44 dmg 1 kill
-    >> Squad total: 312 damage, 2 kills
+    Cotta      [SERGEANT] Chainsword(M): 113 dmg 3 kills Plasma Pistol(L): 67 dmg 1 kill
+    Caecilius  [ASSAULT] Power Sword(M): 19 dmg 2 kills
+    >> Squad total: 199 damage, 6 kills
   Squad health:
-    Ofonius    67% (68/102)
-    Avienus    72% (86/120)
-    Columbanus 29% (34/116)
-    Clymenus   77% (92/120)
-    Cordatus   71% (82/116)
-    Bruccus    71% (84/118)
-    Aquillius  100% (104/104)
-    Verus      70% (80/114)
-    Fabius     98% (106/108)
-    Priscus    73% (90/124)
+    Cotta      100% (110/110)
+    Caecilius  100% (120/120)
+    Carbunculus 100% (110/110)
+    Licinius   100% (114/114)
+    Corvinus   100% (118/118)
+    Caesius    100% (98/98)
+    Cocceius   DOWN
+    Lucretius  100% (102/102)
+    Chronius   100% (100/100)
+    Cincius    DOWN
   Enemies remaining: 0
 
 ======= Marine Weapon Damage =======
-  Cordatus/Hammer of Wrath/M: 201 total damage
-  Priscus/Hammer of Wrath/M: 205 total damage
-  Ofonius/Power Fist/M: 804 total damage
-  Ofonius/Grav Pistol/L: 164 total damage
-  Avienus/Chainsword/M: 242 total damage
-  Avienus/Bolt Pistol/L: 72 total damage
-  Columbanus/Chainsword/M: 226 total damage
-  Columbanus/Bolt Pistol/L: 68 total damage
-  Clymenus/Chainsword/M: 232 total damage
-  Clymenus/Bolt Pistol/L: 70 total damage
-  Cordatus/Lightning Claw/M: 392 total damage
-  Cordatus/Bolt Pistol/L: 72 total damage
-  Bruccus/Chainsword/M: 234 total damage
-  Bruccus/Bolt Pistol/L: 76 total damage
-  Aquillius/Chainsword/M: 224 total damage
-  Aquillius/Grav Pistol/L: 120 total damage
-  Verus/Chainsword/M: 232 total damage
-  Verus/Bolt Pistol/L: 72 total damage
-  Fabius/Chainsword/M: 194 total damage
-  Fabius/Plasma Pistol/L: 126 total damage
-  Priscus/Power Fist/M: 522 total damage
-  Priscus/Bolt Pistol/L: 56 total damage
+  Caecilius/Hammer of Wrath/M: 212 total damage
+  Cocceius/Hammer of Wrath/M: 197 total damage
+  Cotta/Chainsword/M: 339 total damage
+  Cotta/Plasma Pistol/L: 201 total damage
+  Caecilius/Power Sword/M: 293 total damage
+  Caecilius/Bolt Pistol/L: 62 total damage
+  Carbunculus/Chainsword/M: 240 total damage
+  Carbunculus/Plasma Pistol/L: 132 total damage
+  Licinius/Chainsword/M: 214 total damage
+  Licinius/Bolt Pistol/L: 58 total damage
+  Corvinus/Chainsword/M: 226 total damage
+  Corvinus/Bolt Pistol/L: 72 total damage
+  Caesius/Chainsword/M: 222 total damage
+  Caesius/Bolt Pistol/L: 60 total damage
+  Cocceius/Power Sword/M: 138 total damage
+  Cocceius/Bolt Pistol/L: 24 total damage
+  Lucretius/Chainsword/M: 234 total damage
+  Lucretius/Bolt Pistol/L: 72 total damage
+  Chronius/Chainsword/M: 222 total damage
+  Chronius/Bolt Pistol/L: 60 total damage
+  Cincius/Chainsword/M: 83 total damage
+  Cincius/Inferno Pistol/L: 75 total damage
 
 ======= Kills by Enemy Type =======
-  traitor_guardsman: 23
-  cultist: 38
-  chaos_marine: 2
+  cultist: 30
+  traitor_guardsman: 27
   cultist_champion: 2
-  raptor: 3
-  chaos_biker: 1
+  chaos_marine: 4
+  possessed: 1
 
 ======= Battle Outcome =======
 VICTORY: Enemy horde destroyed!
 Turns fought: 3
-Marines combat-ready: 10/10
+Marines combat-ready: 8/10
 Enemies remaining: 0
-Marines down: 0
-Enemies killed: 69
+Marines down: 2
+Enemies killed: 64

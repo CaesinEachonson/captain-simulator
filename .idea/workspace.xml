@@ -5,15 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/item/factory/GearFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data/gear.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CompanyGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/GameData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battle_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/battle_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/BattleSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/BattleSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/CombatResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/CombatResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/item/GearItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/item/GearItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/util/EquipmentDistributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/util/EquipmentDistributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/test/SquadBattleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/test/SquadBattleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +33,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="workOffline" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -48,9 +58,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.CaptainSimulatorApp.executor": "Run",
     "Application.CompanyGeneratorTest.executor": "Run",
     "Application.HordeGenerator.executor": "Run",
     "Application.SquadBattleTest.executor": "Run",
+    "Maven.captain_simulator [clean].executor": "Run",
+    "Maven.captain_simulator [javafx:run].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -59,7 +72,25 @@
     "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.SquadBattleTest">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn javafx:run" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.CaptainSimulatorApp">
+    <configuration name="CaptainSimulatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.captainsim.CaptainSimulatorApp" />
+      <module name="captain_simulator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.captainsim.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CompanyGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.test.CompanyGeneratorTest" />
       <module name="captain_simulator" />
@@ -101,6 +132,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CaptainSimulatorApp" />
         <item itemvalue="Application.SquadBattleTest" />
         <item itemvalue="Application.HordeGenerator" />
         <item itemvalue="Application.CompanyGeneratorTest" />
