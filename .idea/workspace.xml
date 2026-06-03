@@ -103,11 +103,11 @@
 }]]></component>
   <component name="RunManager" selected="Application.SquadBattleTest">
     <configuration name="CompanyGeneratorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.CompanyGeneratorTest" />
+      <option name="MAIN_CLASS_NAME" value="org.test.CompanyGeneratorTest" />
       <module name="captain_simulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="org.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,11 +116,11 @@
       </method>
     </configuration>
     <configuration name="HordeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.HordeGenerator" />
+      <option name="MAIN_CLASS_NAME" value="org.test.HordeGenerator" />
       <module name="captain_simulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="org.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +129,11 @@
       </method>
     </configuration>
     <configuration name="SquadBattleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.SquadBattleTest" />
+      <option name="MAIN_CLASS_NAME" value="org.test.SquadBattleTest" />
       <module name="captain_simulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.*" />
+          <option name="PATTERN" value="org.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

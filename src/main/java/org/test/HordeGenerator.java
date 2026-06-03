@@ -1,4 +1,4 @@
-package test;
+package org.test;
 
 import org.captainsim.unit.enemy.EnemyUnit;
 import org.captainsim.unit.enemy.Horde;

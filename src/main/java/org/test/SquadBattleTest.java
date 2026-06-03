@@ -1,4 +1,4 @@
-package test;
+package org.test;
 
 import org.captainsim.attribute.WorldType;
 import org.captainsim.combat.AttackReport;
