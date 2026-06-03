@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/item/factory/GearFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data/gear.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battle_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/battle_report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/BattleSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/BattleSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/unit/enemy/factions/EnemyChaos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/unit/enemy/factions/EnemyChaos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/CombatResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/combat/CombatResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/item/GearItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/item/GearItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/util/EquipmentDistributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/util/EquipmentDistributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/test/CompanyGeneratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/test/CompanyGeneratorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/test/SquadBattleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/test/SquadBattleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data/weapons_melee.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data/weapons_melee.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,5 +140,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/org/captainsim/combat/BattleSystem.java</url>
+          <line>305</line>
+          <properties class="org.captainsim.combat.BattleSystem" method="selectTarget">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,0 +1,11 @@
+{
+  "jump_pack": {
+    "name": "Jump Pack",
+    "traits": [
+      "jump_pack",
+      "hammer_of_wrath"
+    ],
+    "descent_attacks": 12,
+    "charge_range_bonus": 2
+  }
+}

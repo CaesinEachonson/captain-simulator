@@ -1,5 +1,6 @@
 package org.captainsim.combat;
 
+import org.captainsim.item.GearItem;
 import org.captainsim.unit.enemy.EnemyUnit;
 import org.captainsim.unit.enemy.Horde;
 import org.captainsim.unit.marine.MarineUnit;
@@ -49,6 +50,38 @@ public class BattleSystem {
     }
 
     // ==================== Squad Melee Attack ====================
+    public static CombatReport squadJumpPackAssault(Squad squad, Horde horde) {
+        CombatReport report = new CombatReport();
+        report.setTurnId(nextTurnId());
+
+        for (MarineUnit marine : squad.getAllMarines()) {
+            if (!marine.isAvailable() || marine.getCurrentWounds() <= 0) continue;
+
+            GearItem gear = marine.getExtraSlot1();
+            if (gear == null || !gear.hasTrait("jump_pack")) continue;
+
+            // Hammer of Wrath
+            int attacks = gear.getIntProperty("hammer_of_wrath_attacks", 6);
+            AttackResolve how = CombatResolver.calculateHammerOfWrathDamage(marine, attacks);
+
+            // Sweep
+            int remaining = how.getDamage();
+            while (remaining > 0) {
+                if (horde.isEmpty()) break;
+                EnemyUnit target = selectRandomTarget(horde);
+                if (target == null) break;
+
+                int dealt = Math.min(remaining, target.getCurrentWounds());
+                remaining -= dealt;
+                boolean killed = applyDamageToEnemy(target, dealt);
+                report.addAttackRecord(new AttackReport(
+                        report.getTurnId(), marine.getName(), marine.getRole().name(),
+                        "Hammer of Wrath", "GEAR", target.getTypeId(),
+                        dealt, killed, false, 0, true));
+            }
+        }
+        return report;
+    }
 
     public static CombatReport squadMeleeAttack(Squad squad, Horde horde) {
         CombatReport report = new CombatReport();
@@ -290,7 +323,13 @@ public class BattleSystem {
             return targets.get(ThreadLocalRandom.current().nextInt(targets.size()));
         }
     }
-
+    // For situation where we don't have a valid weapon. Jumppack, for example.
+    private static EnemyUnit selectRandomTarget(Horde horde) {
+        List<EnemyUnit> targets = horde.getUnits().stream()
+                .filter(u -> u.getCurrentWounds() > 0).toList();
+        if (targets.isEmpty()) return null;
+        return targets.get(ThreadLocalRandom.current().nextInt(targets.size()));
+    }
     private static MarineUnit pickRandomMarine(Squad squad) {
         List<MarineUnit> available = squad.getAllMarines().stream()
                 .filter(m -> m.isAvailable() && m.getCurrentWounds() > 0)

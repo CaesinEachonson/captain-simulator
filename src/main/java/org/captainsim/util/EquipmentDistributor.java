@@ -1,5 +1,6 @@
 package org.captainsim.util;
 
+import org.captainsim.item.factory.GearFactory;
 import org.captainsim.unit.marine.MarineUnit;
 import org.captainsim.item.ArmourItem;
 import org.captainsim.item.WeaponItem;
@@ -222,6 +223,9 @@ public class EquipmentDistributor {
         marine.setLeftHand(replacePistol
                 ? randomPistolExcept("bolt_pistol")
                 : getRanged("bolt_pistol"));
+        if (replaceMelee) {
+            marine.setExtraSlot1(GearFactory.create("jump_pack"));
+        }
     }
 
     public static void equipDevastatorMarine(MarineUnit marine, boolean replaceHeavy) {

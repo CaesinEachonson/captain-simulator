@@ -98,4 +98,13 @@ public class CombatResolver {
     public static int calculateOverheatDamage(WeaponItem weapon) {
         return Math.max(1, weapon.getDamage() / 5);
     }
+
+    // ==================== Jump Pack Charge ====================
+    public static AttackResolve calculateHammerOfWrathDamage(BaseUnit attacker, int attacks) {
+        float ws = attacker.getWs();
+        float skillMod = 1.0f + (ws - 40) / 100.0f;
+        float perHit = (attacker.getS() / 2.0f) * skillMod;
+        int totalDamage = Math.round(perHit * attacks);
+        return new AttackResolve(totalDamage);
+    }
 }

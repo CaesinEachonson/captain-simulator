@@ -6,6 +6,7 @@ import org.captainsim.combat.BattleSystem;
 import org.captainsim.combat.CombatReport;
 import org.captainsim.item.ArmourItem;
 import org.captainsim.item.WeaponItem;
+import org.captainsim.item.factory.GearFactory;
 import org.captainsim.unit.enemy.EnemyUnit;
 import org.captainsim.unit.enemy.Horde;
 import org.captainsim.unit.enemy.factions.EnemyChaos;
@@ -33,7 +34,7 @@ public class SquadBattleTest {
     private static final boolean USE_CUSTOM_ENEMY = true;
     private static final int ENEMY_STRENGTH = 1200;
     private static final int ENEMY_THREAT = 2;
-    private static final int COMBAT_DISTANCE = 1;
+    private static final int COMBAT_DISTANCE = 2;
 
     // ==================== Main ====================
 
@@ -42,6 +43,7 @@ public class SquadBattleTest {
         Map<String, WeaponItem> meleeWeapons = loadWeapons("data/weapons_melee.json");
         Map<String, WeaponItem> rangedWeapons = loadWeapons("data/weapons_ranged.json");
         Map<String, ArmourItem> armours = loadArmours("data/armour.json");
+        GearFactory.init(SquadBattleTest.class.getClassLoader().getResourceAsStream("data/gear.json"));
         EquipmentDistributor.init(meleeWeapons, rangedWeapons, armours);
 
         // 2. Create squad
@@ -220,14 +222,38 @@ public class SquadBattleTest {
 
             // --- Player Phase ---
             if (distance > 0) {
-                CombatReport report = BattleSystem.squadRangedAttack(squad, horde, distance, false);
-                printMarineAttackDetails(report, turnLog, "Marines Ranged");
-                recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+                // Check if jump pack available
+                boolean hasJumpPack = squad.getAllMarines().stream()
+                        .anyMatch(m -> m.isAvailable() && m.getCurrentWounds() > 0
+                                && m.getExtraSlot1() != null
+                                && m.getExtraSlot1().hasTrait("jump_pack"));
+
+                if (hasJumpPack && distance <= 2) {
+                    // Death from above
+                    CombatReport howReport = BattleSystem.squadJumpPackAssault(squad, horde);
+                    printMarineAttackDetails(howReport, turnLog, "Hammer of Wrath");
+                    recordMarineResults(howReport, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+
+                    horde.removeDeadUnits();
+
+                    // Enter melee
+                    distance = 0;
+
+                    CombatReport meleeReport = BattleSystem.squadMeleeAttack(squad, horde);
+                    printMarineAttackDetails(meleeReport, turnLog, "Marines Charge Melee");
+                    recordMarineResults(meleeReport, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+                } else {
+                    // Ranged
+                    CombatReport report = BattleSystem.squadRangedAttack(squad, horde, distance, false);
+                    printMarineAttackDetails(report, turnLog, "Marines Ranged");
+                    recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
+                }
             } else {
                 CombatReport report = BattleSystem.squadMeleeAttack(squad, horde);
                 printMarineAttackDetails(report, turnLog, "Marines Melee");
                 recordMarineResults(report, totalMarineWeaponDamage, totalMarineKillsByType, turnLog);
             }
+
 
             horde.removeDeadUnits();
 
