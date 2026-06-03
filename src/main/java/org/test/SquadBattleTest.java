@@ -1,21 +1,21 @@
-package org.test;
+package test;
 
-import org.core.combat.AttackReport;
-import org.core.combat.AttackResolve;
-import org.core.combat.BattleSystem;
-import org.core.combat.CombatReport;
-import org.core.entity.items.ArmourItem;
-import org.core.entity.items.WeaponItem;
-import org.core.entity.units.enemy.EnemyUnit;
-import org.core.entity.units.enemy.Horde;
-import org.core.entity.units.enemy.factions.EnemyChaos;
-import org.core.entity.units.marine.MarineUnit;
-import org.core.entity.units.marine.enums.BattleRole;
+import org.captainsim.attribute.WorldType;
+import org.captainsim.combat.AttackReport;
+import org.captainsim.combat.BattleSystem;
+import org.captainsim.combat.CombatReport;
+import org.captainsim.item.ArmourItem;
+import org.captainsim.item.WeaponItem;
+import org.captainsim.unit.enemy.EnemyUnit;
+import org.captainsim.unit.enemy.Horde;
+import org.captainsim.unit.enemy.factions.EnemyChaos;
+import org.captainsim.unit.marine.MarineUnit;
+import org.captainsim.unit.marine.BattleRole;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import org.core.entity.units.squad.Squad;
-import org.core.entity.units.squad.SquadType;
+import org.captainsim.squad.Squad;
+import org.captainsim.squad.SquadType;
 
 import java.io.*;
 import java.lang.reflect.Type;
@@ -152,7 +152,7 @@ public class SquadBattleTest {
     private static MarineUnit createMarine(String name, BattleRole role) {
         MarineUnit marine = new MarineUnit();
         marine.setName(name);
-        marine.setWorldOrigin(org.core.common.enums.WorldType.CIVILIZED);
+        marine.setWorldOrigin(WorldType.CIVILIZED);
         marine.setRole(role);
         marine.generateAttributes();
         marine.applyLevels(80 + ThreadLocalRandom.current().nextInt(40));

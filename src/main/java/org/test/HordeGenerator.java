@@ -1,8 +1,8 @@
-package org.test;
+package test;
 
-import org.core.entity.units.enemy.EnemyUnit;
-import org.core.entity.units.enemy.Horde;
-import org.core.entity.units.enemy.factions.EnemyChaos;
+import org.captainsim.unit.enemy.EnemyUnit;
+import org.captainsim.unit.enemy.Horde;
+import org.captainsim.unit.enemy.factions.EnemyChaos;
 
 import java.util.*;
 

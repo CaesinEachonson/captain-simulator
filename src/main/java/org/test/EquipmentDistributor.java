@@ -1,10 +1,9 @@
-package org.test;
+package test;
 
-import org.core.entity.units.marine.MarineUnit;
-import org.core.entity.units.marine.enums.BattleRole;
-import org.core.entity.items.ArmourItem;
-import org.core.entity.items.WeaponItem;
-import org.core.utils.Dice;
+import org.captainsim.unit.marine.MarineUnit;
+import org.captainsim.item.ArmourItem;
+import org.captainsim.item.WeaponItem;
+import org.captainsim.util.Dice;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;

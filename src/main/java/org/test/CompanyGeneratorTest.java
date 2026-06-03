@@ -1,13 +1,13 @@
-package org.test;
+package test;
 
-import org.core.common.enums.WorldType;
-import org.core.entity.units.company.Company;
-import org.core.entity.units.company.CompanyType;
-import org.core.entity.items.ArmourItem;
-import org.core.entity.units.marine.MarineUnit;
-import org.core.entity.units.marine.enums.BattleRole;
-import org.core.entity.items.WeaponItem;
-import org.core.entity.units.squad.Squad;
+import org.captainsim.attribute.WorldType;
+import org.captainsim.company.Company;
+import org.captainsim.company.CompanyType;
+import org.captainsim.item.ArmourItem;
+import org.captainsim.unit.marine.MarineUnit;
+import org.captainsim.unit.marine.BattleRole;
+import org.captainsim.item.WeaponItem;
+import org.captainsim.squad.Squad;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
