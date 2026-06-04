@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import org.captainsim.campaign.Campaign;
+import org.captainsim.campaign.CampaignMission;
 import org.captainsim.company.Company;
 import org.captainsim.squad.Squad;
 import org.captainsim.ui.consts.ThemeConst;
@@ -18,10 +20,12 @@ import java.util.Objects;
 
 public class CaptainSimulatorApp extends Application {
 
-    private StackPane mainContent;
+    AnchorPane mainContent;
 
     @Override
     public void start(Stage primaryStage) {
+
+        // Test company
         try {
             GameData.init();
         } catch (Exception e) {
@@ -30,6 +34,16 @@ public class CaptainSimulatorApp extends Application {
         try {
             Company company = CompanyGenerator.generate();
             GameData.getInstance().setCompany(company);
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to generate company", e);
+        }
+
+        // Test campaign
+        try {
+            Campaign campaign = new org.captainsim.campaign.Campaign("Armageddon", 3);
+            campaign.generateMissionsForRound();
+            GameData.getInstance().setCurrentCampaign(campaign);
+
         } catch (Exception e) {
             throw new RuntimeException("Failed to generate company", e);
         }
@@ -63,12 +77,43 @@ public class CaptainSimulatorApp extends Application {
             btn.setMaxWidth(Double.MAX_VALUE);
         }
 
-        VBox sideBar = new VBox(btnHome, btnCommand, btnSquads, btnArmory, btnBattle);
+        // End Turn button — separate styling
+        Button btnEndTurn = new Button("End Turn");
+        btnEndTurn.getStyleClass().add(ThemeConst.CSS_SIDEBAR_BTN);
+        btnEndTurn.setStyle(ThemeConst.FONT_M);
+        btnEndTurn.setMaxWidth(Double.MAX_VALUE);
+        btnEndTurn.setStyle("-fx-background-color: #0a3a0a; -fx-text-fill: #33ff33; " +
+                "-fx-border-color: #33ff33; -fx-border-width: 0 0 1 0;");
+
+        // Spacer to push End Turn to bottom
+        Region sidebarSpacer = new Region();
+        VBox.setVgrow(sidebarSpacer, Priority.ALWAYS);
+        VBox sideBar = new VBox(btnHome, btnCommand, btnSquads, btnArmory, btnBattle,
+                sidebarSpacer, btnEndTurn);
         sideBar.getStyleClass().add("sidebar");
         sideBar.setFillWidth(true);
 
+        // End Turn logic
+        btnEndTurn.setOnAction(e -> {
+            Campaign campaign = GameData.getInstance().getCurrentCampaign();
+            if (campaign == null || !campaign.isActive()) return;
+
+            if (!campaign.allMissionsResolved()) {
+                System.out.println("Not all missions resolved yet!");
+                return;
+            }
+
+            if (campaign.isVictoryReached()) {
+                System.out.println("Campaign over!");
+                return;
+            }
+
+            campaign.advanceRound();
+            showPage(new WarCouncilPage(this::openMissionPage));
+        });
+
         // ===== Main Content Area =====
-        mainContent = new StackPane();
+        mainContent = new AnchorPane();
         mainContent.getStyleClass().add("bg-dark");
 
         // ===== Page Switching =====
@@ -76,7 +121,8 @@ public class CaptainSimulatorApp extends Application {
         btnCommand.setOnAction(e -> showPage(new CommandCenterPage()));
         btnSquads.setOnAction(e -> showPage(new CompanyPage(this::openSquadPage)));
         btnArmory.setOnAction(e -> showPage(new ArmoryPage()));
-        btnBattle.setOnAction(e -> showPage(new BattleOverviewPage()));
+        btnBattle.setOnAction(e -> showPage(new WarCouncilPage(this::openMissionPage)));
+//        btnBattle.setOnAction(e -> showPage(new BattleOverviewPage()));
 
         // Default to Home
         showPage(new HomePage());
@@ -108,11 +154,34 @@ public class CaptainSimulatorApp extends Application {
     private void showPage(Node page) {
         mainContent.getChildren().clear();
         mainContent.getChildren().add(page);
+        if (page instanceof Region r) {
+            AnchorPane.setTopAnchor(r, 0.0);
+            AnchorPane.setBottomAnchor(r, 0.0);
+            AnchorPane.setLeftAnchor(r, 0.0);
+            AnchorPane.setRightAnchor(r, 0.0);
+        }
     }
+
 
     private void openSquadPage(Squad squad) {
         showPage(new SquadPage(squad));
     }
+
+    private void openMissionPage(CampaignMission mission) {
+        if (mission.isDeployed() && !mission.isResolved()) {
+            showPage(new MissionPage(mission, () -> {
+                showPage(new WarCouncilPage(this::openMissionPage));
+            }));
+        } else if (!mission.isDeployed()) {
+            showPage(new DeployPage(mission, () -> {
+                showPage(new WarCouncilPage(this::openMissionPage));
+            }));
+        }
+        // Todo: Jump to DeployPage or MissionPage
+        System.out.println("Mission clicked: " + mission.getName());
+    }
+
+
 
     public static void main(String[] args) {
         launch(args);

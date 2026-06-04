@@ -2,7 +2,7 @@ package org.captainsim.company;
 
 import org.captainsim.chapter.Chapter;
 import org.captainsim.unit.marine.MarineUnit;
-import org.captainsim.mission.Mission;
+import org.captainsim.campaign.Mission;
 import org.captainsim.squad.Squad;
 import org.captainsim.squad.SquadFactory;
 

@@ -3,7 +3,7 @@ package org.captainsim.squad;
 import org.captainsim.company.Company;
 import org.captainsim.unit.marine.MarineUnit;
 import org.captainsim.unit.marine.BattleRole;
-import org.captainsim.mission.Mission;
+import org.captainsim.campaign.Mission;
 
 import java.util.*;
 

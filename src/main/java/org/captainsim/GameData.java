@@ -1,5 +1,6 @@
 package org.captainsim;
 
+import org.captainsim.campaign.Campaign;
 import org.captainsim.company.Company;
 import org.captainsim.item.ArmourItem;
 import org.captainsim.item.WeaponItem;
@@ -21,6 +22,8 @@ public class GameData {
     private static GameData instance;
 
     private Company company;
+    private Campaign currentCampaign;
+
 
     // Private — use getInstance()
     private GameData() {}
@@ -98,6 +101,12 @@ public class GameData {
                 .flatMap(s -> s.getAllMarines().stream())
                 .filter(MarineUnit::isAvailable)
                 .count();
+    }
+
+    public Campaign getCurrentCampaign() { return currentCampaign; }
+    public void setCurrentCampaign(Campaign campaign) { this.currentCampaign = campaign; }
+    public boolean hasActiveCampaign() {
+        return currentCampaign != null && currentCampaign.isActive();
     }
 
 }

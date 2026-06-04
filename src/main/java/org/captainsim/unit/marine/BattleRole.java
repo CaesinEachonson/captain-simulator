@@ -11,7 +11,7 @@ public enum BattleRole {
     SERGEANT,
     CAPTAIN,
     COMPANY_CHAMPION,
-   APOTHECARY,
+    APOTHECARY,
     CHAPLAIN,
     LIBRARIAN,
     TECHMARINE,

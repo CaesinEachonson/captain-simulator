@@ -1,4 +1,4 @@
-package org.captainsim.mission;
+package org.captainsim.campaign;
 
 import java.util.*;
 
