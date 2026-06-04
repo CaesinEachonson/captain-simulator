@@ -17,8 +17,9 @@ public class ThemeConst {
     public static final String CSS_SIDEBAR = "sidebar";
     public static final String CSS_SIDEBAR_BTN = "sidebar-button";
     public static final String CSS_CARD = "card";
+    public static final String CSS_BADGE = "badge";
 
-    public static final String CSS_TEXT = "text-view";
+    public static final String CSS_TEXT = "battle-log";
 
     public static final String CSS_PAGE = "page";
     public static final String CSS_PAGE_HEADER = "page-header";

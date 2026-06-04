@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/consts/ThemeConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/style/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/battle_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/battle_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/CompanyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/util/CompanyGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/consts/ThemeConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/consts/ThemeConst.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/style/theme.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

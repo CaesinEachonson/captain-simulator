@@ -67,8 +67,7 @@ public class CompanyPage extends VBox {
 
         // Type badge
         Label typeBadge = new Label(typeLabel);
-        typeBadge.setStyle("-fx-text-fill: #33cc33; -fx-font-size: 13px; -fx-padding: 2px 10px; " +
-                "-fx-border-color: #33cc33; -fx-border-width: 1; -fx-background-color: #0a1a0a;");
+        typeBadge.getStyleClass().add(ThemeConst.CSS_BADGE);
 
         // Status
         Label statusLabel = new Label(alive + "/" + squad.getSize());

@@ -35,6 +35,11 @@ public class SquadPage extends VBox {
         marineGrid.setHgap(15);
         marineGrid.setVgap(15);
         marineGrid.setPadding(new Insets(0));
+        ColumnConstraints col1 = new ColumnConstraints();
+        col1.setPercentWidth(50);
+        ColumnConstraints col2 = new ColumnConstraints();
+        col2.setPercentWidth(50);
+        marineGrid.getColumnConstraints().addAll(col1, col2);
 
         int col = 0;
         int row = 0;
@@ -109,7 +114,6 @@ public class SquadPage extends VBox {
         int hpPercent = m.getCurrentWounds() > 0
                 ? Math.round((float) m.getCurrentWounds() / m.getWounds() * 100)
                 : 0;
-        String hpColor = hpPercent > 50 ? "#33ff33" : (hpPercent > 20 ? "#ffb000" : "#cc0000");
         String hpClass;
         if (hpPercent > 50)      hpClass = ThemeConst.CSS_HP_GOOD;
         else if (hpPercent > 20) hpClass = ThemeConst.CSS_HP_WOUNDED;

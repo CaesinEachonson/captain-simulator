@@ -38,7 +38,7 @@ public class CommandCenterPage extends VBox {
         // ===== Recent Battles =====
         VBox recentSection = new VBox(10);
         recentSection.setMinHeight(150);
-        equipSection.getStyleClass().add(ThemeConst.CSS_CARD);
+        recentSection.getStyleClass().add(ThemeConst.CSS_CARD);
         recentSection.setPadding(new Insets(15));
 
         // ===== Assemble =====
