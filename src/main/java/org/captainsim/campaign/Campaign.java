@@ -85,7 +85,6 @@ public class Campaign {
     public void generateMissionsForRound() {
         missions.clear();
 
-        // 每回合生成 2~3 个任务
         int count = 2 + ThreadLocalRandom.current().nextInt(2);
 
         for (int i = 0; i < count; i++) {
@@ -95,8 +94,8 @@ public class Campaign {
                     randomMissionType(),
                     generateDifficulty()
             );
-//            cm.setNarrativeDescription(generateNarrative(cm));
-//            cm.setIntelligenceSummary(generateIntel(cm));
+            // cm.setNarrativeDescription(generateNarrative(cm));
+            // cm.setIntelligenceSummary(generateIntel(cm));
             cm.setNarrativeDescription("test Narrative");
             cm.setIntelligenceSummary("test intelligence");
             missions.add(cm);

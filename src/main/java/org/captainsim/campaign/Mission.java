@@ -3,14 +3,14 @@ package org.captainsim.campaign;
 import java.util.*;
 
 public class Mission {
-    private String id;                    // i18n key, e.g. "mission.defend_outpost"
-    private String name;                  // display name
+    private String id;
+    private String name;
 
-    private MissionType type;             // 任务类型
-    private int difficulty;               // 难度等级
+    private MissionType type;
+    private int difficulty;
 
-    private List<String> objectives;      // 任务目标ID列表
-    private Map<String, Integer> enemyForces;  // 敌军配置：单位类型 → 数量
+    private List<String> objectives;
+    private Map<String, Integer> enemyForces;
 
     private boolean isCompleted;
     private boolean isFailed;

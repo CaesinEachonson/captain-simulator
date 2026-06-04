@@ -7,16 +7,16 @@ public class CampaignMission {
 
     private String id;
     private String name;
-    private String narrativeDescription;   // "巢都下层遭到混沌 cultist 袭击..."
+    private String narrativeDescription;
     private MissionType type;
-    private int expectedDifficulty;         // 1-7，对应 threat
-    private String intelligenceSummary;     // 情报摘要
+    private int expectedDifficulty;
+    private String intelligenceSummary;
 
     private boolean deployed;
     private final List<String> assignedSquadIds;
     private boolean completed;
     private boolean failed;
-    private String resultSummary;           // 战斗结束后填充
+    private String resultSummary;
 
     public CampaignMission(String id, String name, MissionType type, int expectedDifficulty) {
         this.id = id;
