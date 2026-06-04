@@ -1,134 +1,137 @@
 ======= Squad Battle Report =======
 Squad: Assault Squad test_assault_squad "Test" (10 marines)
-Enemy: enemy_force (64 units)
+Enemy: enemy_force (66 units)
 Starting distance: 2
 
 --- Squad Equipment ---
-  Cotta      [SERGEANT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VII Aquila
-  Caecilius  [ASSAULT] RH: Power Sword      LH: Bolt Pistol      Armour: MK VII Aquila
-  Carbunculus [ASSAULT] RH: Chainsword       LH: Plasma Pistol    Armour: MK VI Corvus
-  Licinius   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
-  Corvinus   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
-  Caesius    [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK V Heresy
-  Cocceius   [ASSAULT] RH: Power Sword      LH: Bolt Pistol      Armour: MK VII Aquila
-  Lucretius  [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
-  Chronius   [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VI Corvus
-  Cincius    [ASSAULT] RH: Chainsword       LH: Inferno Pistol   Armour: MK VII Aquila
+  Cloelius   [SERGEANT] RH: Power Fist       LH: Inferno Pistol   Armour: MK VII Aquila
+  Cethellus  [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
+  Ambrosinus [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK V Heresy
+  Curio      [ASSAULT] RH: Power Sword      LH: Bolt Pistol      Armour: MK VI Corvus
+  Consentius [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
+  Citelius   [ASSAULT] RH: Power Fist       LH: Bolt Pistol      Armour: MK IV Maximus
+  Benedictus [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VIII Errant
+  Cominius   [ASSAULT] RH: Chainsword       LH: Inferno Pistol   Armour: MK VII Aquila
+  Aristides  [ASSAULT] RH: Chainsword       LH: Grav Pistol      Armour: MK IV Maximus
+  Cosmus     [ASSAULT] RH: Chainsword       LH: Bolt Pistol      Armour: MK VII Aquila
 
 --- Enemy Composition ---
-  cultist: 30
-  traitor_guardsman: 27
-  chaos_marine: 4
+  cultist: 34
+  traitor_guardsman: 25
+  chaos_biker: 2
   possessed: 1
+  raptor: 2
   cultist_champion: 2
 
 --- Turn 1 (Distance: 2) ---
   Hammer of Wrath:
-    Caecilius  [ASSAULT] Hammer of Wrath(M): 212 dmg 5 kills
-    Cocceius   [ASSAULT] Hammer of Wrath(M): 197 dmg 4 kills
-    >> Squad total: 409 damage, 9 kills
+    Curio      [ASSAULT] Hammer of Wrath(M): 196 dmg 4 kills
+    Citelius   [ASSAULT] Hammer of Wrath(M): 200 dmg 4 kills
+    >> Squad total: 396 damage, 8 kills
   Marines Charge Melee:
-    Cotta      [SERGEANT] Chainsword(M): 113 dmg 2 kills Plasma Pistol(L): 67 dmg 1 kill
-    Caecilius  [ASSAULT] Power Sword(M): 137 dmg 1 kill Bolt Pistol(L): 38 dmg 0 kills
-    Carbunculus [ASSAULT] Chainsword(M): 120 dmg 2 kills Plasma Pistol(L): 66 dmg 1 kill
-    Licinius   [ASSAULT] Chainsword(M): 107 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
-    Corvinus   [ASSAULT] Chainsword(M): 113 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
-    Caesius    [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 37 dmg 0 kills
-    Cocceius   [ASSAULT] Power Sword(M): 138 dmg 3 kills Bolt Pistol(L): 24 dmg 0 kills
-    Lucretius  [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
-    Chronius   [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 23 dmg 0 kills
-    Cincius    [ASSAULT] Chainsword(M): 83 dmg 2 kills Inferno Pistol(L): 75 dmg 1 kill
-    >> Squad total: 1588 damage, 25 kills
+    Cloelius   [SERGEANT] Power Fist(M): 276 dmg 1 kill Inferno Pistol(L): 72 dmg 1 kill
+    Cethellus  [ASSAULT] Chainsword(M): 110 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
+    Ambrosinus [ASSAULT] Chainsword(M): 124 dmg 2 kills Bolt Pistol(L): 38 dmg 0 kills
+    Curio      [ASSAULT] Power Sword(M): 132 dmg 3 kills Bolt Pistol(L): 35 dmg 0 kills
+    Consentius [ASSAULT] Chainsword(M): 85 dmg 1 kill Bolt Pistol(L): 25 dmg 0 kills
+    Citelius   [ASSAULT] Power Fist(M): 260 dmg 1 kill Bolt Pistol(L): 36 dmg 0 kills
+    Benedictus [ASSAULT] Chainsword(M): 119 dmg 3 kills Bolt Pistol(L): 38 dmg 0 kills
+    Cominius   [ASSAULT] Chainsword(M): 121 dmg 3 kills Inferno Pistol(L): 73 dmg 1 kill
+    Aristides  [ASSAULT] Chainsword(M): 114 dmg 3 kills Grav Pistol(L): 60 dmg 0 kills
+    Cosmus     [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 38 dmg 0 kills
+    >> Squad total: 1909 damage, 23 kills
   Enemy Phase:
     possessed: 3 hits, 348 total damage, 2 marines down
-    [CASUALTY] Cincius
-    [CASUALTY] Cocceius
+    raptor: 3 hits, 87 total damage, 0 marines down
+    [CASUALTY] Cloelius
+    [CASUALTY] Cethellus
   Squad health:
-    Cotta      100% (110/110)
-    Caecilius  100% (120/120)
-    Carbunculus 100% (110/110)
-    Licinius   100% (114/114)
-    Corvinus   100% (118/118)
-    Caesius    100% (98/98)
-    Cocceius   DOWN
-    Lucretius  100% (102/102)
-    Chronius   100% (100/100)
-    Cincius    DOWN
-  Enemies remaining: 30
+    Cloelius   DOWN
+    Cethellus  DOWN
+    Ambrosinus 100% (116/116)
+    Curio      100% (110/110)
+    Consentius 8% (10/126)
+    Citelius   73% (74/102)
+    Benedictus 77% (85/110)
+    Cominius   70% (80/114)
+    Aristides  100% (120/120)
+    Cosmus     100% (104/104)
+  Enemies remaining: 35
 
 --- Turn 2 (Distance: 0) ---
   Marines Melee:
-    Cotta      [SERGEANT] Chainsword(M): 113 dmg 2 kills Plasma Pistol(L): 67 dmg 1 kill
-    Caecilius  [ASSAULT] Power Sword(M): 137 dmg 4 kills Bolt Pistol(L): 24 dmg 0 kills
-    Carbunculus [ASSAULT] Chainsword(M): 120 dmg 2 kills Plasma Pistol(L): 66 dmg 1 kill
-    Licinius   [ASSAULT] Chainsword(M): 107 dmg 1 kill Bolt Pistol(L): 22 dmg 1 kill
-    Corvinus   [ASSAULT] Chainsword(M): 113 dmg 2 kills Bolt Pistol(L): 36 dmg 0 kills
-    Caesius    [ASSAULT] Chainsword(M): 111 dmg 2 kills Bolt Pistol(L): 23 dmg 1 kill
-    Lucretius  [ASSAULT] Chainsword(M): 117 dmg 2 kills Bolt Pistol(L): 36 dmg 1 kill
-    Chronius   [ASSAULT] Chainsword(M): 111 dmg 3 kills Bolt Pistol(L): 37 dmg 1 kill
-    >> Squad total: 1240 damage, 24 kills
+    Ambrosinus [ASSAULT] Chainsword(M): 124 dmg 3 kills Bolt Pistol(L): 38 dmg 0 kills
+    Curio      [ASSAULT] Power Sword(M): 132 dmg 4 kills Bolt Pistol(L): 35 dmg 1 kill
+    Consentius [ASSAULT] Chainsword(M): 115 dmg 3 kills Bolt Pistol(L): 39 dmg 0 kills
+    Citelius   [ASSAULT] Power Fist(M): 256 dmg 1 kill Bolt Pistol(L): 36 dmg 1 kill
+    Benedictus [ASSAULT] Chainsword(M): 119 dmg 2 kills Bolt Pistol(L): 24 dmg 0 kills
+    Cominius   [ASSAULT] Chainsword(M): 121 dmg 3 kills Inferno Pistol(L): 73 dmg 1 kill
+    Aristides  [ASSAULT] Chainsword(M): 114 dmg 4 kills Grav Pistol(L): 52 dmg 0 kills
+    Cosmus     [ASSAULT] Chainsword(M): 117 dmg 3 kills Bolt Pistol(L): 38 dmg 1 kill
+    >> Squad total: 1433 damage, 27 kills
   Enemy Phase:
   Squad health:
-    Cotta      100% (110/110)
-    Caecilius  100% (120/120)
-    Carbunculus 100% (110/110)
-    Licinius   100% (114/114)
-    Corvinus   100% (118/118)
-    Caesius    100% (98/98)
-    Cocceius   DOWN
-    Lucretius  100% (102/102)
-    Chronius   100% (100/100)
-    Cincius    DOWN
-  Enemies remaining: 6
+    Cloelius   DOWN
+    Cethellus  DOWN
+    Ambrosinus 100% (116/116)
+    Curio      100% (110/110)
+    Consentius 8% (10/126)
+    Citelius   73% (74/102)
+    Benedictus 77% (85/110)
+    Cominius   70% (80/114)
+    Aristides  100% (120/120)
+    Cosmus     100% (104/104)
+  Enemies remaining: 8
 
 --- Turn 3 (Distance: 0) ---
   Marines Melee:
-    Cotta      [SERGEANT] Chainsword(M): 113 dmg 3 kills Plasma Pistol(L): 67 dmg 1 kill
-    Caecilius  [ASSAULT] Power Sword(M): 19 dmg 2 kills
-    >> Squad total: 199 damage, 6 kills
+    Ambrosinus [ASSAULT] Chainsword(M): 124 dmg 4 kills Bolt Pistol(L): 38 dmg 1 kill
+    Curio      [ASSAULT] Power Sword(M): 94 dmg 3 kills
+    >> Squad total: 256 damage, 8 kills
   Squad health:
-    Cotta      100% (110/110)
-    Caecilius  100% (120/120)
-    Carbunculus 100% (110/110)
-    Licinius   100% (114/114)
-    Corvinus   100% (118/118)
-    Caesius    100% (98/98)
-    Cocceius   DOWN
-    Lucretius  100% (102/102)
-    Chronius   100% (100/100)
-    Cincius    DOWN
+    Cloelius   DOWN
+    Cethellus  DOWN
+    Ambrosinus 100% (116/116)
+    Curio      100% (110/110)
+    Consentius 8% (10/126)
+    Citelius   73% (74/102)
+    Benedictus 77% (85/110)
+    Cominius   70% (80/114)
+    Aristides  100% (120/120)
+    Cosmus     100% (104/104)
   Enemies remaining: 0
 
 ======= Marine Weapon Damage =======
-  Caecilius/Hammer of Wrath/M: 212 total damage
-  Cocceius/Hammer of Wrath/M: 197 total damage
-  Cotta/Chainsword/M: 339 total damage
-  Cotta/Plasma Pistol/L: 201 total damage
-  Caecilius/Power Sword/M: 293 total damage
-  Caecilius/Bolt Pistol/L: 62 total damage
-  Carbunculus/Chainsword/M: 240 total damage
-  Carbunculus/Plasma Pistol/L: 132 total damage
-  Licinius/Chainsword/M: 214 total damage
-  Licinius/Bolt Pistol/L: 58 total damage
-  Corvinus/Chainsword/M: 226 total damage
-  Corvinus/Bolt Pistol/L: 72 total damage
-  Caesius/Chainsword/M: 222 total damage
-  Caesius/Bolt Pistol/L: 60 total damage
-  Cocceius/Power Sword/M: 138 total damage
-  Cocceius/Bolt Pistol/L: 24 total damage
-  Lucretius/Chainsword/M: 234 total damage
-  Lucretius/Bolt Pistol/L: 72 total damage
-  Chronius/Chainsword/M: 222 total damage
-  Chronius/Bolt Pistol/L: 60 total damage
-  Cincius/Chainsword/M: 83 total damage
-  Cincius/Inferno Pistol/L: 75 total damage
+  Curio/Hammer of Wrath/M: 196 total damage
+  Citelius/Hammer of Wrath/M: 200 total damage
+  Cloelius/Power Fist/M: 276 total damage
+  Cloelius/Inferno Pistol/L: 72 total damage
+  Cethellus/Chainsword/M: 110 total damage
+  Cethellus/Bolt Pistol/L: 36 total damage
+  Ambrosinus/Chainsword/M: 372 total damage
+  Ambrosinus/Bolt Pistol/L: 114 total damage
+  Curio/Power Sword/M: 358 total damage
+  Curio/Bolt Pistol/L: 70 total damage
+  Consentius/Chainsword/M: 200 total damage
+  Consentius/Bolt Pistol/L: 64 total damage
+  Citelius/Power Fist/M: 516 total damage
+  Citelius/Bolt Pistol/L: 72 total damage
+  Benedictus/Chainsword/M: 238 total damage
+  Benedictus/Bolt Pistol/L: 62 total damage
+  Cominius/Chainsword/M: 242 total damage
+  Cominius/Inferno Pistol/L: 146 total damage
+  Aristides/Chainsword/M: 228 total damage
+  Aristides/Grav Pistol/L: 112 total damage
+  Cosmus/Chainsword/M: 234 total damage
+  Cosmus/Bolt Pistol/L: 76 total damage
 
 ======= Kills by Enemy Type =======
-  cultist: 30
-  traitor_guardsman: 27
+  traitor_guardsman: 25
+  cultist: 34
   cultist_champion: 2
-  chaos_marine: 4
+  raptor: 2
   possessed: 1
+  chaos_biker: 2
 
 ======= Battle Outcome =======
 VICTORY: Enemy horde destroyed!
@@ -136,4 +139,4 @@ Turns fought: 3
 Marines combat-ready: 8/10
 Enemies remaining: 0
 Marines down: 2
-Enemies killed: 64
+Enemies killed: 66

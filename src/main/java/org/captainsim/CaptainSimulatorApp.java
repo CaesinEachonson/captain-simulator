@@ -1,7 +1,6 @@
 package org.captainsim;
 
 import javafx.application.Application;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.Scene;
@@ -11,7 +10,11 @@ import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import org.captainsim.company.Company;
 import org.captainsim.squad.Squad;
+import org.captainsim.ui.consts.ThemeConst;
 import org.captainsim.ui.page.*;
+import org.captainsim.util.CompanyGenerator;
+
+import java.util.Objects;
 
 public class CaptainSimulatorApp extends Application {
 
@@ -33,18 +36,19 @@ public class CaptainSimulatorApp extends Application {
 
         // ===== Top Bar =====
         Label titleLabel = new Label("CAPTAIN SIMULATOR");
-        titleLabel.setStyle("-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #d4af37;");
+        titleLabel.getStyleClass().add(ThemeConst.CSS_TEXT_GOLD);
+        titleLabel.setStyle(ThemeConst.FONT_XL);
 
         Label infoLabel = new Label("3rd Company  |  100 Brothers  |  Supply: Adequate");
-        infoLabel.setStyle("-fx-text-fill: #cccccc;");
+        infoLabel.getStyleClass().add(ThemeConst.CSS_TEXT_SECONDARY);
+        infoLabel.setStyle(ThemeConst.FONT_M);
 
         Region spacer = new Region();
         HBox.setHgrow(spacer, Priority.ALWAYS);
 
         HBox topBar = new HBox(20, titleLabel, spacer, infoLabel);
+        topBar.getStyleClass().add("top-bar");
         topBar.setAlignment(Pos.CENTER_LEFT);
-        topBar.setPadding(new Insets(15, 20, 15, 20));
-        topBar.setStyle("-fx-background-color: #1a1a2e;");
 
         // ===== Sidebar =====
         Button btnHome    = new Button("Home");
@@ -53,22 +57,19 @@ public class CaptainSimulatorApp extends Application {
         Button btnArmory  = new Button("Armory");
         Button btnBattle  = new Button("Battle");
 
-        String btnStyle = "-fx-font-size: 14px; -fx-padding: 12px 20px; " +
-                "-fx-background-color: #16213e; -fx-text-fill: #e0e0e0; " +
-                "-fx-border-color: #0f3460; -fx-border-width: 0 0 1 0;";
         for (var btn : new Button[]{btnHome, btnCommand, btnSquads, btnArmory, btnBattle}) {
-            btn.setStyle(btnStyle);
+            btn.getStyleClass().add(ThemeConst.CSS_SIDEBAR_BTN);
+            btn.setStyle(ThemeConst.FONT_M);
             btn.setMaxWidth(Double.MAX_VALUE);
         }
 
         VBox sideBar = new VBox(btnHome, btnCommand, btnSquads, btnArmory, btnBattle);
-        sideBar.setStyle("-fx-background-color: #16213e;");
-        sideBar.setPrefWidth(160);
+        sideBar.getStyleClass().add("sidebar");
         sideBar.setFillWidth(true);
 
         // ===== Main Content Area =====
         mainContent = new StackPane();
-        mainContent.setStyle("-fx-background-color: #1a1a2e;");
+        mainContent.getStyleClass().add("bg-dark");
 
         // ===== Page Switching =====
         btnHome.setOnAction(e -> showPage(new HomePage()));
@@ -82,11 +83,11 @@ public class CaptainSimulatorApp extends Application {
 
         // ===== Bottom Bar =====
         Label statusLabel = new Label("▸ All brothers standing by");
-        statusLabel.setStyle("-fx-text-fill: #666666; -fx-font-size: 12px;");
+        statusLabel.getStyleClass().add(ThemeConst.CSS_TEXT_MUTED);
+        statusLabel.setStyle(ThemeConst.FONT_S);
 
         HBox bottomBar = new HBox(statusLabel);
-        bottomBar.setPadding(new Insets(8, 20, 8, 20));
-        bottomBar.setStyle("-fx-background-color: #0f3460;");
+        bottomBar.getStyleClass().add("bottom-bar");
 
         // ===== Assemble =====
         BorderPane root = new BorderPane();
@@ -96,6 +97,7 @@ public class CaptainSimulatorApp extends Application {
         root.setBottom(bottomBar);
 
         Scene scene = new Scene(root);
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/style/theme.css")).toExternalForm());
         primaryStage.setTitle("Captain Simulator");
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
@@ -108,7 +110,6 @@ public class CaptainSimulatorApp extends Application {
         mainContent.getChildren().add(page);
     }
 
-    // Called when a squad card is clicked in CompanyPage
     private void openSquadPage(Squad squad) {
         showPage(new SquadPage(squad));
     }

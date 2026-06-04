@@ -1,5 +1,6 @@
-package org.captainsim;
+package org.captainsim.util;
 
+import org.captainsim.GameData;
 import org.captainsim.attribute.WorldType;
 import org.captainsim.company.Company;
 import org.captainsim.company.CompanyType;

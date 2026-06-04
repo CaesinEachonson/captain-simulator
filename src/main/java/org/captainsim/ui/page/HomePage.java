@@ -2,24 +2,26 @@ package org.captainsim.ui.page;
 
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
+import org.captainsim.ui.consts.ThemeConst;
 
 public class HomePage extends VBox {
 
     public HomePage() {
         setSpacing(20);
         setPadding(new Insets(30));
-        setStyle("-fx-background-color: #1a1a2e;");
+        getStyleClass().add(ThemeConst.CSS_BG_DARK);
 
         VBox header = new VBox(5);
         header.setMinHeight(80);
-        header.setStyle("-fx-border-color: #333; -fx-border-width: 0 0 1 0;");
+        header.getStyleClass().add(ThemeConst.CSS_PAGE_HEADER);
+        header.setStyle(ThemeConst.FONT_XL);
 
         HBox summaryCards = new HBox(20);
         summaryCards.setMinHeight(120);
         for (int i = 0; i < 4; i++) {
             VBox card = new VBox();
             card.setMinSize(180, 100);
-            card.setStyle("-fx-background-color: #0f3460; -fx-background-radius: 8;");
+            card.getStyleClass().add(ThemeConst.CSS_CARD);
             summaryCards.getChildren().add(card);
         }
 
@@ -28,13 +30,13 @@ public class HomePage extends VBox {
         for (int i = 0; i < 3; i++) {
             VBox action = new VBox();
             action.setMinSize(200, 120);
-            action.setStyle("-fx-background-color: #16213e; -fx-background-radius: 8; -fx-border-color: #0f3460;");
+            action.getStyleClass().add(ThemeConst.CSS_CARD);
             quickActions.getChildren().add(action);
         }
 
         VBox recentActivity = new VBox(10);
         recentActivity.setMinHeight(200);
-        recentActivity.setStyle("-fx-border-color: #333; -fx-border-width: 1; -fx-border-radius: 4;");
+        recentActivity.getStyleClass().add(ThemeConst.CSS_CARD);
         recentActivity.setPadding(new Insets(15));
 
         getChildren().addAll(header, summaryCards, quickActions, recentActivity);

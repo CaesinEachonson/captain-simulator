@@ -1,0 +1,137 @@
+/* ===== Retro Terminal Theme ===== */
+.root {
+    -fx-black: #000000;
+    -fx-darkest: #0a0a0a;
+    -fx-dark: #111111;
+    -fx-green-dim: #0a3a0a;
+    -fx-green: #33ff33;
+    -fx-green-bright: #66ff66;
+    -fx-green-muted: #227722;
+    -fx-text-primary: #33ff33;
+    -fx-text-secondary: #33cc33;
+    -fx-text-muted: #226622;
+    -fx-text-dim: #0f3f0f;
+    -fx-border-color: #33ff33;
+
+    -fx-font-family: "Courier New", "Consolas", monospace;
+}
+
+/* ===== Panels ===== */
+.bg-dark      { -fx-background-color: -fx-black; }
+.bg-secondary { -fx-background-color: -fx-darkest; }
+.bg-accent    { -fx-background-color: -fx-green-dim; }
+
+/* ===== Text Colors ===== */
+.text-gold      { -fx-text-fill: -fx-green-bright; -fx-font-weight: bold; }
+.text-primary   { -fx-text-fill: -fx-green; }
+.text-secondary { -fx-text-fill: -fx-text-secondary; }
+.text-muted     { -fx-text-fill: -fx-text-muted; }
+
+/* ===== Top Bar ===== */
+.top-bar {
+    -fx-background-color: -fx-black;
+    -fx-padding: 12px 20px;
+    -fx-border-color: transparent transparent -fx-green-dim transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ===== Bottom Bar ===== */
+.bottom-bar {
+    -fx-background-color: -fx-darkest;
+    -fx-padding: 8px 20px;
+    -fx-border-color: -fx-green-dim transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    -fx-background-color: -fx-black;
+    -fx-pref-width: 180px;
+    -fx-border-color: transparent -fx-green-dim transparent transparent;
+    -fx-border-width: 0 1 0 0;
+}
+.sidebar-button {
+    -fx-padding: 14px 22px;
+    -fx-background-color: -fx-black;
+    -fx-text-fill: -fx-green;
+    -fx-border-color: transparent;
+}
+.sidebar-button:hover {
+    -fx-background-color: -fx-darkest;
+    -fx-text-fill: -fx-green-bright;
+}
+.sidebar-button:pressed {
+    -fx-background-color: -fx-green-dim;
+}
+
+.text-view {
+    -fx-background-color: -fx-black;
+    -fx-background-radius: 0;
+    -fx-border-color: -fx-green-muted;
+    -fx-border-width: 1;
+    -fx-padding: 14px;
+}
+
+/* ===== Cards ===== */
+.card {
+    -fx-background-color: -fx-black;
+    -fx-background-radius: 0;
+    -fx-border-color: -fx-green-muted;
+    -fx-border-width: 1;
+    -fx-padding: 14px;
+}
+.card:hover {
+    -fx-border-color: -fx-green-bright;
+    -fx-background-color: -fx-darkest;
+}
+
+/* ===== Page ===== */
+.page {
+    -fx-spacing: 18;
+    -fx-padding: 25px;
+    -fx-background-color: -fx-black;
+}
+
+/* ===== Page Header ===== */
+.page-header {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-green-bright;
+    -fx-padding: 0 0 8 0;
+    -fx-border-color: transparent transparent -fx-green-dim transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+/* ===== Subtitle ===== */
+.page-subtitle {
+    -fx-text-fill: -fx-text-muted;
+    -fx-padding: 0 0 10 0;
+}
+
+/* ===== ScrollPane ===== */
+.scroll-pane {
+    -fx-background: -fx-black;
+    -fx-background-color: -fx-black;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: -fx-black;
+}
+
+/* ===== Portrait Placeholder ===== */
+.portrait-frame {
+    -fx-background-color: -fx-black;
+    -fx-border-color: -fx-green-muted;
+    -fx-border-width: 1;
+}
+/* ===== Health Colors ===== */
+.hp-good {
+    -fx-text-fill: #33ff33;
+    -fx-font-weight: bold;
+}
+.hp-wounded {
+    -fx-text-fill: #ffb000;
+    -fx-font-weight: bold;
+}
+.hp-critical {
+    -fx-text-fill: #cc0000;
+    -fx-font-weight: bold;
+}

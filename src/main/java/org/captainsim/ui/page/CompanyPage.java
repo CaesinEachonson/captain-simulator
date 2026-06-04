@@ -8,6 +8,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
 import org.captainsim.GameData;
 import org.captainsim.squad.Squad;
+import org.captainsim.ui.consts.ThemeConst;
 import org.captainsim.unit.marine.MarineUnit;
 
 import java.util.function.Consumer;
@@ -20,63 +21,73 @@ public class CompanyPage extends VBox {
         this.onSquadClick = onSquadClick;
         setSpacing(15);
         setPadding(new Insets(20));
-        setStyle("-fx-background-color: #1a1a2e;");
+        getStyleClass().add(ThemeConst.CSS_BG_DARK);
 
         // Header
         Label header = new Label("Company Squads");
-        header.setStyle("-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #d4af37;");
+        header.getStyleClass().add(ThemeConst.CSS_PAGE_HEADER);
+        header.setStyle(ThemeConst.FONT_XL);
 
         int total = GameData.getInstance().getTotalMarines();
         Label subtext = new Label("10 Squads · " + total + " Brothers");
-        subtext.setStyle("-fx-font-size: 13px; -fx-text-fill: #888888;");
+        subtext.getStyleClass().add(ThemeConst.CSS_TEXT_MUTED);
+        subtext.setStyle(ThemeConst.FONT_S);
 
         VBox headerBox = new VBox(5, header, subtext);
         headerBox.setPadding(new Insets(0, 0, 10, 0));
 
-        // Squad cards in a scrollable grid
-        FlowPane squadGrid = new FlowPane();
-        squadGrid.setHgap(15);
-        squadGrid.setVgap(15);
+        // Squad list — one per row
+        VBox squadList = new VBox(8);
+        squadList.setPadding(new Insets(0));
 
         for (Squad squad : GameData.getInstance().getSquads()) {
-            squadGrid.getChildren().add(createSquadCard(squad));
+            squadList.getChildren().add(createSquadRow(squad));
         }
 
-        ScrollPane scrollPane = new ScrollPane(squadGrid);
+        ScrollPane scrollPane = new ScrollPane(squadList);
         scrollPane.setFitToWidth(true);
-        scrollPane.setStyle("-fx-background: #1a1a2e; -fx-background-color: #1a1a2e;");
+        scrollPane.getStyleClass().add("scroll-pane");
 
         getChildren().addAll(headerBox, scrollPane);
         VBox.setVgrow(scrollPane, Priority.ALWAYS);
     }
 
-    private VBox createSquadCard(Squad squad) {
+    private HBox createSquadRow(Squad squad) {
         String typeLabel = squad.getSquadType().name().replace('_', ' ').toLowerCase();
         typeLabel = typeLabel.substring(0, 1).toUpperCase() + typeLabel.substring(1);
 
         int alive = (int) squad.getAllMarines().stream()
                 .filter(MarineUnit::isAvailable).count();
 
-        Label title = new Label(squad.getDisplayName());
-        title.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #d4af37;");
+        // Squad name + honor title
+        Label nameLabel = new Label(squad.getDisplayName());
+        nameLabel.getStyleClass().add(ThemeConst.CSS_TEXT_GOLD);
+        nameLabel.setStyle(ThemeConst.FONT_M);
+        HBox.setHgrow(nameLabel, Priority.ALWAYS);
 
-        Label count = new Label(alive + "/" + squad.getSize() + " brothers available");
-        count.setStyle("-fx-font-size: 12px; -fx-text-fill: #aaaaaa;");
+        // Type badge
+        Label typeBadge = new Label(typeLabel);
+        typeBadge.setStyle("-fx-text-fill: #33cc33; -fx-font-size: 13px; -fx-padding: 2px 10px; " +
+                "-fx-border-color: #33cc33; -fx-border-width: 1; -fx-background-color: #0a1a0a;");
 
-        VBox card = new VBox(8, title, count);
-        card.setPadding(new Insets(15));
-        card.setStyle("-fx-background-color: #16213e; -fx-background-radius: 8; -fx-border-color: #0f3460; -fx-border-radius: 8;");
-        card.setPrefWidth(280);
-        card.setMinHeight(80);
-        card.setMaxHeight(80);
+        // Status
+        Label statusLabel = new Label(alive + "/" + squad.getSize());
+        statusLabel.getStyleClass().add(ThemeConst.CSS_TEXT_MUTED);
+        statusLabel.setStyle(ThemeConst.FONT_M);
 
-        card.setOnMouseClicked(e -> {
+        HBox row = new HBox(15, nameLabel, typeBadge, statusLabel);
+        row.setPadding(new Insets(12, 15, 12, 15));
+        row.getStyleClass().add(ThemeConst.CSS_CARD);
+        row.setMaxWidth(Double.MAX_VALUE);
+        row.setMinHeight(50);
+
+        row.setOnMouseClicked(e -> {
             if (e.getButton() == MouseButton.PRIMARY && onSquadClick != null) {
                 onSquadClick.accept(squad);
             }
         });
-        card.setCursor(Cursor.HAND);
+        row.setCursor(Cursor.HAND);
 
-        return card;
+        return row;
     }
 }

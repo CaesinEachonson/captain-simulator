@@ -5,18 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dacb2bfc-1939-474b-bfbc-de6bdf87198f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CompanyGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/GameData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/consts/ThemeConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/style/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/battle_report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/battle_report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/CaptainSimulatorApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/CompanyGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/util/CompanyGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/ArmoryPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/BattleOverviewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CommandCenterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/CompanyPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/captainsim/ui/page/SquadPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,34 +56,34 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.CaptainSimulatorApp.executor": "Run",
-    "Application.CompanyGeneratorTest.executor": "Run",
-    "Application.HordeGenerator.executor": "Run",
-    "Application.SquadBattleTest.executor": "Run",
-    "Maven.captain_simulator [clean].executor": "Run",
-    "Maven.captain_simulator [javafx:run].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.CaptainSimulatorApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.CompanyGeneratorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.HordeGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SquadBattleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.captain_simulator [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.captain_simulator [javafx:run].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn javafx:run" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.CaptainSimulatorApp">
+  <component name="RunManager" selected="Application.SquadBattleTest">
     <configuration name="CaptainSimulatorApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.captainsim.CaptainSimulatorApp" />
       <module name="captain_simulator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.captainsim.*" />
+          <option name="PATTERN" value="org.captainsim.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,8 +132,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CaptainSimulatorApp" />
         <item itemvalue="Application.SquadBattleTest" />
+        <item itemvalue="Application.CaptainSimulatorApp" />
         <item itemvalue="Application.HordeGenerator" />
         <item itemvalue="Application.CompanyGeneratorTest" />
       </list>
